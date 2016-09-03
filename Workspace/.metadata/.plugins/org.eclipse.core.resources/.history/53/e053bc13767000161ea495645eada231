@@ -1,0 +1,12 @@
+
+public class Droite {
+	
+	public Droite() {
+		this(new Point(), new Point());
+	}
+	
+	public Droite(Point a, Point b) {
+		
+	}
+
+}

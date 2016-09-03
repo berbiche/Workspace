@@ -1,0 +1,30 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Point p1 = new Point(2,3);
+		
+		Point p2 = new Point();
+		p2.setX(p1.getX());
+		p2.setY(p1.getY());
+		
+		Point p3 = new Point();
+		p3 = p1;
+		
+
+		System.out.println("Distance p1 = " + p1.distance(0, 0));
+		
+		System.out.println("p2.x = " + p2.getX() + ", p2.y = " + p2.getY());
+		System.out.println("p3.x = " + p3.getX() + ", p3.y = " + p3.getY());
+		
+		p1.setX(4);
+		p2.setX(5);
+		p3.setX(6);
+		
+		System.out.println("p1.x = " + p1.getX() + ", p1.y = " + p1.getY());
+		System.out.println("p2.x = " + p2.getX() + ", p2.y = " + p2.getY());
+		System.out.println("p3.x = " + p3.getX() + ", p3.y = " + p3.getY());
+		
+	}
+
+}

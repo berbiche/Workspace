@@ -1,0 +1,37 @@
+
+public class Etudiant {
+	
+	private String nom, prenom;
+	private int numDossier;
+	
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public int getNumDossier() {
+		return numDossier;
+	}
+	
+	public Etudiant(int numDossier) {
+		this("", "", numDossier);
+	}
+
+	public Etudiant(String nom, String prenom, int numDossier) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.numDossier = numDossier;
+	}
+	
+}
