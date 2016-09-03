@@ -32,7 +32,7 @@ public class Point {
 	}
 	
 	/**
-	 * Constructeurs par défaut
+	 * Constructeurs par d?faut
 	 */
 	public Point() {
 		this(0, 0);
@@ -47,9 +47,9 @@ public class Point {
 	}
 	
 	/**
-	 * Constructeur avec des coordonnées
-	 * @param x : Coordonnée x
-	 * @param y : Coordonnée y
+	 * Constructeur avec des coordonnÃ©es
+	 * @param x : CoordonnÃ©e x
+	 * @param y : CoordonnÃ©e y
 	 */
 	public Point(double x, double y) {
 		this.x = x;
@@ -57,19 +57,19 @@ public class Point {
 	}
 	
 	/**
-	 * Calcule la distance entre deux coordonnées
+	 * Calcule la distance entre deux coordonnÃ©es
 	 * @param p : Instance de Point
-	 * @return La distance entre deux coordonnées
+	 * @return La distance entre deux coordonnÃ©es
 	 */
 	public double distance(Point p) {
 		return distance(p.x, p.y);
 	}
 	
 	/**
-	 * Calcule la distance entre deux coordonnées
-	 * @param x : Coordonnée x
-	 * @param y : Coordonnée y
-	 * @return La distance entre deux coordonnées
+	 * Calcule la distance entre deux coordonnÃ©es
+	 * @param x : CoordonnÃ©e x
+	 * @param y : CoordonnÃ©e y
+	 * @return La distance entre deux coordonnÃ©es
 	 */
 	public double distance(double x, double y) {
 		return Math.hypot(this.y - y, this.x - x);
