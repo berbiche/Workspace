@@ -1,0 +1,25 @@
+﻿<Window x:Class="laboPO01v2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="388" Width="612" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,172,0,0" Name="txtMot1" VerticalAlignment="Top" Width="221"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="250,172,0,0" Name="txtGenre1" VerticalAlignment="Top" Width="29" MaxLength="1"/>
+        <TextBox Height="103" HorizontalAlignment="Left" Margin="12,0,0,12" Name="txtDefinition1" VerticalAlignment="Bottom" Width="267" TextWrapping="Wrap" />
+        <Button Content="Ajouter un mot" Height="23" HorizontalAlignment="Left" Margin="74,39,0,0" Name="btnAjouter" VerticalAlignment="Top" Width="168" Click="btnAjouter_Click" IsTabStop="False" />
+        <Button Content="Afficher un mot" Height="23" HorizontalAlignment="Left" Margin="364,39,0,0" Name="btnAfficher" VerticalAlignment="Top" Width="168" Click="btnAfficher_Click" IsTabStop="False" />
+        <Label Content="Mot" Height="28" HorizontalAlignment="Left" Margin="12,138,0,0" Name="lblMot1" VerticalAlignment="Top" />
+        <Label Content="Genre" Height="28" HorizontalAlignment="Left" Margin="251,138,0,0" Name="lblGenre1" VerticalAlignment="Top" />
+        <Label Content="Définition" Height="28" HorizontalAlignment="Left" Margin="12,201,0,0" Name="lblDefinition1" VerticalAlignment="Top" Width="103" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="302,172,0,0" Name="txtMot2" VerticalAlignment="Top" Width="221" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="540,172,0,0" Name="txtGenre2" VerticalAlignment="Top" Width="29" MaxLength="1"/>
+        <TextBox Height="103" HorizontalAlignment="Left" Margin="302,0,0,12" Name="txtDefinition2" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="267" />
+        <Label Content="Mot" Height="28" HorizontalAlignment="Left" Margin="302,138,0,0" Name="lblMot2" VerticalAlignment="Top" />
+        <Label Content="Genre" Height="28" HorizontalAlignment="Left" Margin="541,138,0,0" Name="lblGenre2" VerticalAlignment="Top" />
+        <Label Content="Définition" Height="28" HorizontalAlignment="Left" Margin="302,201,0,0" Name="lblDéfinition2" VerticalAlignment="Top" Width="103" />
+        <Label Height="37" HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Margin="0,67,0,0" Name="lblTitre" VerticalAlignment="Top" Width="360" FontSize="16" FontWeight="Bold" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="12,104,0,0" Name="lblLangue1" VerticalAlignment="Top" Width="221" FontSize="14" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="302,104,0,0" Name="lblLangue2" VerticalAlignment="Top" Width="221" FontSize="14" />
+        <Button Content="Initialiser les titres " Height="23" HorizontalAlignment="Center" Name="btnTitres" VerticalAlignment="Top" Width="459" Click="btnTitres_Click" IsTabStop="False" />
+    </Grid>
+</Window>

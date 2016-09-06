@@ -1,0 +1,22 @@
+package cegep;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Cegep {
+	
+	private List<Etudiant> listeEtudiant;
+	
+	public Cegep() {
+		listeEtudiant = new ArrayList<Etudiant>();
+	}
+	
+	public void ajoutEtudiant(int numDossier) {
+		listeEtudiant.add(new Etudiant(numDossier));
+	}
+	
+	public void ajoutEtudiant(String nom, String prenom, int numDossier) {
+		listeEtudiant.add(new Etudiant(nom, prenom, numDossier));
+	}
+
+}

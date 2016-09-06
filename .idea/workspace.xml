@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce98d7bf-a3da-46b4-97ae-aa4fd3641733" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Workspace.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/.idea/Workspace.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/Cartesien/Cartesien.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/GestionEtudiants.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/treecp.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a2/10c102a77c7000161ea495645eada231" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d2/80331b0e7f7000161ea495645eada231" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/Cartesien.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.lock" afterPath="$PROJECT_DIR$/Java/.metadata/.lock" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.log" afterPath="$PROJECT_DIR$/Java/.metadata/.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.mylyn/.taskListIndex/segments.gen" afterPath="$PROJECT_DIR$/Java/.metadata/.mylyn/.taskListIndex/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.mylyn/.taskListIndex/segments_1" afterPath="$PROJECT_DIR$/Java/.metadata/.mylyn/.taskListIndex/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.mylyn/.tasks.xml.zip" afterPath="$PROJECT_DIR$/Java/.metadata/.mylyn/.tasks.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.mylyn/repositories.xml.zip" afterPath="$PROJECT_DIR$/Java/.metadata/.mylyn/repositories.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.mylyn/tasks.xml.zip" afterPath="$PROJECT_DIR$/Java/.metadata/.mylyn/tasks.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/10/70593051707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/10/70593051707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/13/5085a9a7f06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/13/5085a9a7f06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/1d/d04f40b0787000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/1d/d04f40b0787000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/1f/f0806cd7e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/1f/f0806cd7e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2/10086bac7c7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/2/10086bac7c7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/24/70a9bbc57a7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/24/70a9bbc57a7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/25/a0a3f3fc7c7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/25/a0a3f3fc7c7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/26/e045ece4e36e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/26/e045ece4e36e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2a/008ae4ae707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/2a/008ae4ae707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2b/f0bf9928f06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/2b/f0bf9928f06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/2e/20422012ec6e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/2e/20422012ec6e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/30/20791940737000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/30/20791940737000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/32/908e48a77a7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/32/908e48a77a7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/37/40ebdd71817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/37/40ebdd71817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3a/3002e227707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3a/3002e227707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3a/a0574c077f7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3a/a0574c077f7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3b/80f3298be46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3b/80f3298be46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3c/30d05e5a707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3c/30d05e5a707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3c/b080312b837000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3c/b080312b837000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/3d/c06deb8bef6e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/3d/c06deb8bef6e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/40/80d3554c707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/40/80d3554c707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/42/f05119a0747000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/42/f05119a0747000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/44/40ad4fa5e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/44/40ad4fa5e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/48/30e7f138797000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/48/30e7f138797000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4a/70b740f3787000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/4a/70b740f3787000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4b/b008f658817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/4b/b008f658817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/4d/602fecf77e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/4d/602fecf77e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5/d05d419be46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/5/d05d419be46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5/f0aaeeede06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/5/f0aaeeede06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/53/e053bc13767000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/53/e053bc13767000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/55/f0fd26b8707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/55/f0fd26b8707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/56/00318694e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/56/00318694e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/56/805416e9787000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/56/805416e9787000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/57/80d758287e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/57/80d758287e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/59/30e0bbb7e86e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/59/30e0bbb7e86e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/59/700828ca737000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/59/700828ca737000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/59/70cce674056b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/59/70cce674056b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/59/e01dd28ce76e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/59/e01dd28ce76e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/5a/808eaa947c7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/5a/808eaa947c7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/6/a0b5dcca777000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/6/a0b5dcca777000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/63/105a4346817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/63/105a4346817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/65/f0a2cd81797000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/65/f0a2cd81797000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/69/2074df82e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/69/2074df82e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/69/3080fb5a827000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/69/3080fb5a827000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7/90e212d7817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/7/90e212d7817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7/a0cde9ca7a7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/7/a0cde9ca7a7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/70/0062cac7767000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/70/0062cac7767000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/71/6094de6b817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/71/6094de6b817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/73/00370520056b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/73/00370520056b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/73/70970866817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/73/70970866817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/78/200a8ab9e06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/78/200a8ab9e06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/78/e0ba65fa7e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/78/e0ba65fa7e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7a/605a7edb7e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/7a/605a7edb7e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7a/f05c07d4e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/7a/f05c07d4e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/7b/d04886e9827000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/7b/d04886e9827000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/80/30419248837000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/80/30419248837000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/82/90691a88e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/82/90691a88e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8b/3004ebdbe46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/8b/3004ebdbe46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8c/40a46a96eb6e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/8c/40a46a96eb6e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/8f/7013cb35737000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/8f/7013cb35737000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/96/20a3da54787000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/96/20a3da54787000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/99/109a2c4be16e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/99/109a2c4be16e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/99/50baea7ee46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/99/50baea7ee46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/9e/40368fc7e06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/9e/40368fc7e06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a/10e1c1a97c7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/a/10e1c1a97c7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a/90b59e26066b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/a/90b59e26066b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a7/50de6da57e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/a7/50de6da57e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/a9/60e4306a817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/a9/60e4306a817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b0/6090ee89707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/b0/6090ee89707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b2/4008e8d9e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/b2/4008e8d9e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b4/b098bf017f7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/b4/b098bf017f7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b4/f06ad296e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/b4/f06ad296e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/b8/40ab3f85e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/b8/40ab3f85e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ba/5061a79de46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/ba/5061a79de46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/bc/7015f9857f7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/bc/7015f9857f7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c3/20e4b13c737000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/c3/20e4b13c737000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c5/10ee76d1e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/c5/10ee76d1e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c7/70874f427d7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/c7/70874f427d7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/c7/90175661ef6e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/c7/90175661ef6e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ce/1068d6b8817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/ce/1068d6b8817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/cf/f0d3190e7f7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/cf/f0d3190e7f7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d/20a78d27f06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/d/20a78d27f06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d3/f0104001e96e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/d3/f0104001e96e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d4/1092ac92707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/d4/1092ac92707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/d6/500114e3817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/d6/500114e3817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/df/30c030a57c7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/df/30c030a57c7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e/40b29ff3767000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e/40b29ff3767000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e0/6076961d046b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e0/6076961d046b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e0/901d67a0e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e0/901d67a0e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e3/f0f60313e26e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e3/f0f60313e26e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e5/70b650e5777000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e5/70b650e5777000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e5/b0a0e4a2e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e5/b0a0e4a2e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e5/f0102197757000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e5/f0102197757000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e7/9060a191e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e7/9060a191e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/e8/50798fe0817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/e8/50798fe0817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ed/20d828fee36e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/ed/20d828fee36e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ef/10ec13d27e7000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/ef/10ec13d27e7000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/ef/5094ae8f707000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/ef/5094ae8f707000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f/10e26263f06e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/f/10e26263f06e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f0/60371199e46e00161a4e93d449ddf653" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/f0/60371199e46e00161a4e93d449ddf653" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f4/503f7bde817000161ea495645eada231" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/f4/503f7bde817000161ea495645eada231" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/f7/7086b938056b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/f7/7086b938056b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.history/fd/00442d54056b00161fadf09aebeefa3b" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/fd/00442d54056b00161fadf09aebeefa3b" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.indexes/af/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.indexes/af/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.indexes/e4/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.indexes/e4/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.markers" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.markers" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.syncinfo" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/.syncinfo" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/org.eclipse.jdt.core/state.dat" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Cartesien/org.eclipse.jdt.core/state.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/af/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/af/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/e4/b0/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/e4/b0/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/e4/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.indexes/e4/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.syncinfo" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/.syncinfo" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/org.eclipse.jdt.core/state.dat" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/GestionEtudiants/org.eclipse.jdt.core/state.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.indexes/e4/history.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.indexes/e4/history.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.markers" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.markers" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.syncinfo" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/.syncinfo" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/org.eclipse.jdt.core/state.dat" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.projects/Introduction/org.eclipse.jdt.core/state.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.root/3.tree" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.root/3.tree" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.collabnet.subversion.merge.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/com.collabnet.subversion.merge.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ant.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ant.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.debug.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.java.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.java.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.completion.rcp.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.completion.rcp.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.rcp.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.recommenders.rcp.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.monitoring.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.monitoring.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.tools.usage.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.tools.usage.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.ui.prefs" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.tigris.subversion.subclipse.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.debug.core/.launches/Principal.launch" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.debug.core/.launches/Principal.launch" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdx" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fdx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fnm" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.fnm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.frq" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.frq" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.nrm" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.nrm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tii" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tii" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tis" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/_0.tis" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments.gen" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments_1" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/history/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdx" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fdx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fnm" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.fnm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.frq" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.frq" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.nrm" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.nrm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tii" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tii" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tis" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/_0.tis" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments.gen" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments_1" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.epp.logging.aeri.ui/remote-index/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/1484076330.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/1484076330.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/1507339265.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/1507339265.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/1651349548.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/1651349548.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/1670528678.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/1670528678.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/178291131.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/178291131.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/1948745554.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/1948745554.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/2261558828.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/2261558828.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/2372324319.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/2372324319.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/2816509004.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/2816509004.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/2945162093.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/2945162093.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/3678980623.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/3678980623.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/3764404749.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/3764404749.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/3876561862.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/3876561862.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/3930511455.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/3930511455.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/4142306923.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/4142306923.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/4236009997.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/4236009997.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/430205200.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/430205200.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/47423239.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/47423239.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/509712851.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/509712851.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/83085761.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/83085761.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/900771366.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/900771366.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/indexNamesMap.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.debug.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.debug.ui/stackTraceConsole.txt" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.debug.ui/stackTraceConsole.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/9/36/refactorings.history" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/9/36/refactorings.history" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/9/36/refactorings.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/9/36/refactorings.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/GestionEtudiants/2016/9/36/refactorings.history" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/GestionEtudiants/2016/9/36/refactorings.history" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/GestionEtudiants/2016/9/36/refactorings.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/GestionEtudiants/2016/9/36/refactorings.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Introduction/2016/8/35/refactorings.history" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Introduction/2016/8/35/refactorings.history" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Introduction/2016/8/35/refactorings.index" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Introduction/2016/8/35/refactorings.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.6.0.20150526-2032.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.6.0.20150526-2032.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/.plugins/org.tigris.subversion.subclipse.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/Java/.metadata/.plugins/org.tigris.subversion.subclipse.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.metadata/version.ini" afterPath="$PROJECT_DIR$/Java/.metadata/version.ini" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/caches/identified-project-coordinates.json" afterPath="$PROJECT_DIR$/Java/.recommenders/caches/identified-project-coordinates.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/caches/manual-mappings.json" afterPath="$PROJECT_DIR$/Java/.recommenders/caches/manual-mappings.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fdt" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fdt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fdx" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fdx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fnm" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.fnm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.frq" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.frq" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.nrm" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.nrm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.prx" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.prx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.tii" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.tii" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.tis" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/_2.tis" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments.gen" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments_3" afterPath="$PROJECT_DIR$/Java/.recommenders/index/http___download_eclipse_org_recommenders_models_mars_/segments_3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.classpath" afterPath="$PROJECT_DIR$/Java/Cartesien/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/compiler.xml" afterPath="$PROJECT_DIR$/Java/.idea/compiler.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/Java/.idea/copyright/profiles_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/misc.xml" afterPath="$PROJECT_DIR$/Java/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/modules.xml" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/vcs.xml" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/vcs.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Java/Cartesien/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/.project" afterPath="$PROJECT_DIR$/Java/Cartesien/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/Cartesien.eml" afterPath="$PROJECT_DIR$/Java/Cartesien/Cartesien.eml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/bin/Droite.class" afterPath="$PROJECT_DIR$/Java/Cartesien/bin/Droite.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/bin/Point.class" afterPath="$PROJECT_DIR$/Java/Cartesien/bin/Point.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/bin/Principal.class" afterPath="$PROJECT_DIR$/Java/Cartesien/bin/Principal.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/src/Droite.java" afterPath="$PROJECT_DIR$/Java/Cartesien/src/Droite.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/src/Point.java" afterPath="$PROJECT_DIR$/Java/Cartesien/src/Point.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Cartesien/src/Principal.java" afterPath="$PROJECT_DIR$/Java/Cartesien/src/Principal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/.classpath" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/.project" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/bin/cegep/Cegep.class" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/bin/cegep/Cegep.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/bin/cegep/Etudiant.class" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/bin/cegep/Etudiant.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/src/cegep/Cegep.java" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/src/cegep/Cegep.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/GestionEtudiants/src/cegep/Etudiant.java" afterPath="$PROJECT_DIR$/Java/GestionEtudiants/src/cegep/Etudiant.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/.classpath" afterPath="$PROJECT_DIR$/Java/Introduction/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/.project" afterPath="$PROJECT_DIR$/Java/Introduction/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/bin/Collection.class" afterPath="$PROJECT_DIR$/Java/Introduction/bin/Collection.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/bin/Principal.class" afterPath="$PROJECT_DIR$/Java/Introduction/bin/Principal.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/src/Collection.java" afterPath="$PROJECT_DIR$/Java/Introduction/src/Collection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Workspace/Introduction/src/Principal.java" afterPath="$PROJECT_DIR$/Java/Introduction/src/Principal.java" />
+    </list>
+    <ignored path="Workspace.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Workspace$treecp.coverage" NAME="treecp Coverage Results" MODIFIED="1473119010018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/Workspace$Exercice.coverage" NAME="Exercice Coverage Results" MODIFIED="1473026240566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Workspace" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="treecp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Python/Exercice.py" />
+        <option value="$PROJECT_DIR$/Python/treecp/copy.py" />
+        <option value="$PROJECT_DIR$/Python/treecp.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="22" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="C:/Python27/python.exe" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\Python" />
+      <recent name="C:\Workspace\Python\treecp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.treecp">
+    <configuration default="false" name="Exercice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Workspace\Python\treecp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="treecp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/treecp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="Workspace" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Workspace" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.Exercice" />
+      <item index="1" class="java.lang.String" itemvalue="Python.treecp" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.treecp" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Exercice" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce98d7bf-a3da-46b4-97ae-aa4fd3641733" name="Default" comment="" />
+      <created>1472918491664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1472918491664</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14605543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903865" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35584137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14712153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/a2/10c102a77c7000161ea495645eada231" />
+    <entry file="file://$PROJECT_DIR$/Java/.metadata/.plugins/org.eclipse.core.resources/.history/d/20a78d27f06e00161a4e93d449ddf653">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/treecp/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Python/treecp/copy.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="963" column="0" selection-start-line="963" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Workspace/Python/treecp.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Workspace/Python/treecp.py</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="937.9999999999999" y="311.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+            <Category>Methods</Category>
+            <Category>Fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/treecp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

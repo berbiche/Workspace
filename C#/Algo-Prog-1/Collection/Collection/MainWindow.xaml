@@ -1,0 +1,50 @@
+﻿<Window x:Class="Collection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Labo Collection" Height="350" Width="573">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD6CD11" Offset="1"/>
+                <GradientStop Color="#FFE64C4C"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Nom Auto" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtNomAuto" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Prix Auto" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtPrixAuto" HorizontalAlignment="Left" Height="23" Margin="10,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <StackPanel HorizontalAlignment="Left" Height="Auto" Margin="143,36,0,0" VerticalAlignment="Top" Width="124">
+            <Button Name="btnAjoutCol" Content="Ajouter à la collection" Click="btnAjoutCol_Click" Background="#FF60F10C"/>
+            <Button Name="btnInversercol" Content="Inverser la collection" Margin="0,15,0,0" Click="btnInversercol_Click" Background="#FFA7F9EE"/>
+            <Button Name="btnAjoutTabCol" Content="Ajouter tabl à la coll" Margin="0,15,0,0" Click="btnAjoutTabCol_Click" Background="#FF62F110"/>
+            <Button Name="btnReplaceTabCol" Content="Remplacer tabl par col" Margin="0,15,0,0" Click="btnReplaceTabCol_Click" Background="#FFA7F9EE"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="Auto" Margin="284,36,0,0" VerticalAlignment="Top" Width="124">
+            <Button Name="btnNbrCol" Content="Nbr élément dans coll" Click="btnNbrCol_Click" Background="#FFA7F9EE"/>
+            <Button Name="btnCapCol" Content="Capacité de collection" Margin="0,15,0,0" Click="btnCapCol_Click" Background="#FFA7F9EE"/>
+            <Button Name="btnNoDetruire" Content="No élément à détruire" Margin="0,15,0,0" Click="btnNoDetruire_Click" Background="#FFF51515"/>
+            <Button Name="btnViderCol" Content="Vider la collection" Margin="0,15,0,0" Click="btnViderCol_Click" Background="#FFF31414"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="425,36,0,0" Width="Auto" Height="125" VerticalAlignment="Top">
+            <TextBox Name="txtNbrElem" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+            <TextBox Name="txtCap" HorizontalAlignment="Left" Height="20" Margin="0,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+            <TextBox Name="txtElemX" HorizontalAlignment="Left" Height="20" Margin="0,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        </StackPanel>
+        <Button Name="btnAffCol" Content="Afficher la collection" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Width="120" Background="#FF119CB2" Click="btnAffCol_Click"/>
+        <Button Name="btnAffTab" Content="Afficher le tableau" HorizontalAlignment="Left" Margin="425,169,0,0" VerticalAlignment="Top" Width="120" Background="#FF119CB2" Click="btnAffTab_Click"/>
+        <ListBox Name="listCollection" HorizontalAlignment="Left" Height="100" Margin="10,196,0,0" VerticalAlignment="Top" Width="257" BorderBrush="#FF2752D4">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <ListBox Name="listTableau" HorizontalAlignment="Left" Height="100" Margin="284,196,0,0" VerticalAlignment="Top" Width="261" BorderBrush="#FF2752D4">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="2"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>

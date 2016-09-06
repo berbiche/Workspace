@@ -1,0 +1,23 @@
+
+public class Droite {
+	
+	private Point a, b;
+	
+	public Point getA() {
+		return a;
+	}
+
+	public Point getB() {
+		return b;
+	}
+
+	public Droite() {
+		this(new Point(), new Point());
+	}
+	
+	public Droite(Point a, Point b) {
+		this.a = new Point(a);
+		this.b = new Point(b);
+	}
+
+}

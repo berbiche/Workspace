@@ -1,0 +1,38 @@
+﻿<Window x:Class="TP1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP1"
+        mc:Ignorable="d"
+        Title="Écriture dans un journal" Height="450" Width="525" MinWidth="525" MaxWidth="525" MinHeight="450">
+    <Grid>
+        <GroupBox Header="Saisie des données" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="140" Width="230">
+            <Grid>
+                <Label Content="Montant" Height="26" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="70"/>
+                <TextBox Name="txtMontant" HorizontalAlignment="Left" Height="26" Margin="85,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+                <RadioButton Name="rdiCredit" Content="Crédit" HorizontalAlignment="Left" Margin="126,49,0,0" VerticalAlignment="Top" Width="85" IsChecked="True"/>
+                <RadioButton Name="rdiDebit" Content="Débit" HorizontalAlignment="Left" Margin="126,69,0,0" VerticalAlignment="Top" Width="80"/>
+                <Label Content="Type d'opération" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="111"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Opérations" HorizontalAlignment="Left" Margin="245,10,0,0" VerticalAlignment="Top" Height="140" Width="262">
+            <StackPanel>
+                <Button Name="btnEcrire" Content="Écrire dans le journal" Click="WriteInJournal" Margin="10,15,10,0"/>
+                <Button Name="btnAnnuler" Content="Annuler la dernière écriture" Click="UndoLastWrite" Margin="10,15,10,0"/>
+                <Button Name="btnQuit" Content="Quitter l'application" Click="Quit" Margin="10,15,10,0"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Journal des écritures" HorizontalAlignment="Left" Margin="10,155,0,5" Width="497">
+            <Grid>
+                <Label Content="Crédit" Margin="10,0,385,194"/>
+                <ListBox Name="lbDebit" Margin="244,30,10,37"/>
+                <Label Content="Débit" Margin="246,0,98,194"/>
+                <ListBox Name="lbCredit" Margin="10,30,244,37"/>
+                <TextBox Name="txtBalance" Text="0" HorizontalAlignment="Left" Margin="149,0,0,0" TextWrapping="Wrap" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="186" Height="32" VerticalAlignment="Bottom"/>
+                <Label Content="Balance" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="134" Height="32" VerticalAlignment="Bottom"/>
+                <Label Name="lblTemps" Content="Date: " HorizontalAlignment="Left" HorizontalContentAlignment="Left" Margin="340,0,0,1" Width="135" IsEnabled="False" Height="31" VerticalAlignment="Bottom"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
