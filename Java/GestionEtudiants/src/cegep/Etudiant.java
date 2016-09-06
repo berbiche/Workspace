@@ -34,4 +34,9 @@ public class Etudiant {
 		this.noDossier = noDossier;
 	}
 	
+	@Override
+	public String toString() {
+		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", noDossier=" + noDossier + "]";
+	}
+	
 }

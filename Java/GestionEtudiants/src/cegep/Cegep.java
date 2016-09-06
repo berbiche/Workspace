@@ -6,27 +6,20 @@ import java.util.List;
 public class Cegep {
 	
 	private List<Etudiant> listeEtudiant;
-	
+	private List<Cours> listeCours;
+
 	public Cegep() {
 		listeEtudiant = new ArrayList<Etudiant>();
+		listeCours = new ArrayList<Cours>();
 	}
 	
 	/**
 	 * Ajoute un étudiant avec un numéro de dossier;
-	 * @param noDossier : Numéro de dossier de l'étudiant
+	 * @param noDossier : Liste de numéro de dossier (1 ou + dossier)
 	 */
-	public void ajoutEtudiant(String noDossier) {
-		listeEtudiant.add(new Etudiant(noDossier));
-	}
-	
-	/**
-	 * Ajoute un étudiant avec toutes les informations
-	 * @param nom : Le nom de famille
-	 * @param prenom : Le prénom
-	 * @param noDossier : Numéro de dossier de l'étudiant
-	 */
-	public void ajoutEtudiant(String nom, String prenom, String noDossier) {
-		listeEtudiant.add(new Etudiant(nom, prenom, noDossier));
+	public void ajoutEtudiant(Etudiant... étudiants) {
+		for (Etudiant e : étudiants)
+			listeEtudiant.add(e);
 	}
 	
 	/**
@@ -35,9 +28,9 @@ public class Cegep {
 	 * @return null si aucun étudiant possède ce numéro de dossier sinon Etudiant
 	 */
 	public Etudiant getEtudiantByNoDossier(String noDossier) {
-		for (Etudiant i: listeEtudiant) {
-			if (i.getNumDossier() == noDossier)
-				return i;
+		for (Etudiant e: listeEtudiant) {
+			if (e.getNumDossier().equals(noDossier))
+				return e;
 		}
 		return null;
 	}
@@ -50,10 +43,31 @@ public class Cegep {
 	public List<Etudiant> getAllEtudiantsByNomFamille(String nom) {
 		List<Etudiant> etudiants = new ArrayList<Etudiant>();
 		for (Etudiant i: listeEtudiant) {
-			if (i.getNom() == nom)
+			if (i.getNom().equals(nom))
 				etudiants.add(i);
 		}
 		return etudiants;
+	}
+	
+	/**
+	 * Ajoute un ou plusieurs cours à la liste de cours
+	 * @param lCours : 1 ou plusieurs cours
+	 */
+	public void ajoutCours(Cours... lCours) {
+		for (Cours e : lCours)
+			listeCours.add(e);
+	}
+	
+	/**
+	 * Chercher un cours par son numéro de dossier
+	 * @param numero : le numéro de 
+	 * @return Retourne l'instance du Cours correspondant au numero sinon NULL
+	 */
+	public Cours getCoursByNumero(int numero) {
+		for (Cours e : listeCours)
+			if (e.getNumero() == numero)
+				return e;
+		return null;
 	}
 
 }
