@@ -21,7 +21,7 @@ public class Cours {
 		return numero;
 	}
 	
-	public Cours(int numero) {
+	Cours(int numero) {
 		this(numero, "", 0);
 	}
 	
@@ -30,7 +30,7 @@ public class Cours {
 	 * @param nom : Le nom du cours
 	 * @param longueur : La longueur de prestation du cours
 	 */
-	public Cours(int numero, String nom, int longueur) {
+	Cours(int numero, String nom, int longueur) {
 		super();
 		this.numero = numero;
 		this.nom = nom;

@@ -1,36 +1,25 @@
 package cegep;
 
-public class Etudiant {
+public class Etudiant extends Personne {
 	
-	private String nom, prenom, noDossier;
-	
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+	private String noDossier;
 
 	public String getNumDossier() {
 		return noDossier;
 	}
 	
-	public Etudiant(String noDossier) {
+	Etudiant(String noDossier) {
 		this("", "", noDossier);
 	}
 
-	public Etudiant(String nom, String prenom, String noDossier) {
-		this.nom = nom;
-		this.prenom = prenom;
+	/**
+	 * Constructeur par défaut d'Étudiant
+	 * @param nom : Le nom de famille
+	 * @param prenom : Le prénom
+	 * @param noDossier : Le numéro de dossier unique
+	 */
+	Etudiant(String nom, String prenom, String noDossier) {
+		super(nom, prenom);
 		this.noDossier = noDossier;
 	}
 	

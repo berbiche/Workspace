@@ -1,25 +1,8 @@
 package cegep;
 
-public class Professeur {
+public class Professeur extends Personne {
 	
-	private String nom, prenom;
 	private int nas;
-	
-	public String getNom() {
-		return nom;
-	}
-	
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	
-	public String getPrenom() {
-		return prenom;
-	}
-	
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
 	
 	public int getNas() {
 		return nas;
@@ -30,10 +13,8 @@ public class Professeur {
 	 * @param prenom : Le prénom
 	 * @param nas : Le numéro d'assurance sociale
 	 */
-	public Professeur(String nom, String prenom, int nas) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
+	Professeur(String nom, String prenom, int nas) {
+		super(nom, prenom);
 		this.nas = nas;
 	}
 	

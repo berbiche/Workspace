@@ -7,19 +7,25 @@ public class Cegep {
 	
 	private List<Etudiant> listeEtudiant;
 	private List<Cours> listeCours;
+	private List<Personne> benevoles;
+	private int compteur;
 
 	public Cegep() {
 		listeEtudiant = new ArrayList<Etudiant>();
 		listeCours = new ArrayList<Cours>();
+		benevoles = new ArrayList<Personne>();
+		compteur = 0;
 	}
 	
 	/**
 	 * Ajoute un étudiant avec un numéro de dossier;
 	 * @param noDossier : Liste de numéro de dossier (1 ou + dossier)
+	 * @return l'instance de l'objet Etudiant créée
 	 */
-	public void ajoutEtudiant(Etudiant... étudiants) {
-		for (Etudiant e : étudiants)
-			listeEtudiant.add(e);
+	public Etudiant ajoutEtudiant() {
+		Etudiant e = new Etudiant(Integer.toString(compteur++));
+		listeEtudiant.add(e);
+		return e;
 	}
 	
 	/**
@@ -50,12 +56,14 @@ public class Cegep {
 	}
 	
 	/**
-	 * Ajoute un ou plusieurs cours à la liste de cours
-	 * @param lCours : 1 ou plusieurs cours
+	 * Ajouter un cours dans la liste de cours
+	 * @param num : Le numéro du cours
+	 * @return l'instance de l'objet Cours créée
 	 */
-	public void ajoutCours(Cours... lCours) {
-		for (Cours e : lCours)
-			listeCours.add(e);
+	public Cours ajoutCours(int num) {
+		Cours e = new Cours(num);
+		listeCours.add(e);
+		return e;
 	}
 	
 	/**
@@ -68,6 +76,10 @@ public class Cegep {
 			if (e.getNumero() == numero)
 				return e;
 		return null;
+	}
+	
+	public void inscrireBenevole(Personne benevole) {
+		benevoles.add(benevole);
 	}
 
 }
