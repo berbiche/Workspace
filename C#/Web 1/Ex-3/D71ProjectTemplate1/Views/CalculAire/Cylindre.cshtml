@@ -1,0 +1,25 @@
+﻿<!Doctype HTML>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	@{
+		if (ViewBag.volume != null)
+		{
+			<h1>Un cylindre d'une hauteur de <span style="color: red">@ViewBag.hauteur</span> et d'un rayon de <span style="color: red">@ViewBag.rayon</span> aura un volume de <span style="color: red">@ViewBag.volume</h1>
+		}
+		using (Html.BeginForm("Cylindre", "CalculAire", FormMethod.Get))
+		{
+			@Html.Label("rayon", "Rayon : ")
+			@Html.TextBox("rayon", (string)ViewBag.rayon)
+			<br />
+			@Html.Label("hauteur", "Hauteur : ")
+			@Html.TextBox("hauteur", (string)ViewBag.rayon)
+			<br />
+			<input type="submit" value="GO!" />
+		}
+	}
+</body>
+</html>
+
