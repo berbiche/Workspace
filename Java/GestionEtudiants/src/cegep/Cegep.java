@@ -1,14 +1,13 @@
 package cegep;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Cegep {
 	
-	private List<Etudiant> listeEtudiant;
-	private List<Professeur> listeProfesseur;
-	private List<Cours> listeCours;
-	private List<Personne> listeBenevoles;
+	private ArrayList<Etudiant> listeEtudiant;
+	private ArrayList<Professeur> listeProfesseur;
+	private ArrayList<Cours> listeCours;
+	private ArrayList<Personne> listeBenevoles;
 
 	public Cegep() {
 		listeEtudiant = new ArrayList<Etudiant>();
@@ -46,8 +45,8 @@ public class Cegep {
 	 * @param nom : Le nom de famille recherché
 	 * @return la liste d'étudiant avec le nom donné
 	 */
-	public List<Etudiant> getAllEtudiantsByNomFamille(String nom) {
-		List<Etudiant> etudiants = new ArrayList<Etudiant>();
+	public ArrayList<Etudiant> getAllEtudiantsByNomFamille(String nom) {
+		ArrayList<Etudiant> etudiants = new ArrayList<Etudiant>();
 		for (Etudiant i: listeEtudiant) {
 			if (i.getNom().equals(nom))
 				etudiants.add(i);
@@ -57,13 +56,13 @@ public class Cegep {
 	
 	/**
 	 * Ajouter un professeur à la liste des professeurs
-	 * @param prenom
 	 * @param nom
+	 * @param prenom
 	 * @param nas
 	 * @return
 	 */
-	public Professeur embaucherProfesseur(String prenom, String nom, int nas) {
-		Professeur e = new Professeur(prenom, nom, nas);
+	public Professeur embaucherProfesseur(String nom, String prenom, int nas) {
+		Professeur e = new Professeur(nom, prenom, nas);
 		listeProfesseur.add(e);
 		return e;
 	}

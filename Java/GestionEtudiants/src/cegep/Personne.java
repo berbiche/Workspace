@@ -20,9 +20,9 @@ public abstract class Personne {
 		this.prenom = prenom;
 	}
 	
-	protected Personne(String prenom, String nom) {
-		this.prenom = prenom;
+	protected Personne(String nom, String prenom) {
 		this.nom = nom;
+		this.prenom = prenom;
 	}
 	
 	public String payerStationnement() {
