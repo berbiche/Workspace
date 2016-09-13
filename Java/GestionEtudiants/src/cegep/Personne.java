@@ -1,6 +1,6 @@
 package cegep;
 
-public class Personne {
+public abstract class Personne {
 	
 	protected String nom, prenom;
 	
@@ -20,14 +20,19 @@ public class Personne {
 		this.prenom = prenom;
 	}
 	
-	/**
-	 * Constructeur de la classe "Parente"
-	 * @param nom : Le nom de famille
-	 * @param prenom : Le prénom
-	 */
-	protected Personne(String nom, String prenom) {
-		this.nom = nom;
+	protected Personne(String prenom, String nom) {
 		this.prenom = prenom;
+		this.nom = nom;
+	}
+	
+	public String payerStationnement() {
+		return nom + " " + prenom + " a payé 300$ de stationnement";
 	}
 
+	@Override
+	public String toString() {
+		return "Personne [nom=" + nom + ", prenom=" + prenom + "]";
+	}
+	
+	
 }

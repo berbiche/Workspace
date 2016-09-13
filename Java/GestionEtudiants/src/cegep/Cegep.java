@@ -6,15 +6,15 @@ import java.util.List;
 public class Cegep {
 	
 	private List<Etudiant> listeEtudiant;
+	private List<Professeur> listeProfesseur;
 	private List<Cours> listeCours;
-	private List<Personne> benevoles;
-	private int compteur;
+	private List<Personne> listeBenevoles;
 
 	public Cegep() {
 		listeEtudiant = new ArrayList<Etudiant>();
+		listeProfesseur = new ArrayList<Professeur>();
 		listeCours = new ArrayList<Cours>();
-		benevoles = new ArrayList<Personne>();
-		compteur = 0;
+		listeBenevoles = new ArrayList<Personne>();
 	}
 	
 	/**
@@ -22,8 +22,8 @@ public class Cegep {
 	 * @param noDossier : Liste de numéro de dossier (1 ou + dossier)
 	 * @return l'instance de l'objet Etudiant créée
 	 */
-	public Etudiant ajoutEtudiant() {
-		Etudiant e = new Etudiant(Integer.toString(compteur++));
+	public Etudiant ajoutEtudiant(String noDossier) {
+		Etudiant e = new Etudiant(noDossier);
 		listeEtudiant.add(e);
 		return e;
 	}
@@ -56,6 +56,19 @@ public class Cegep {
 	}
 	
 	/**
+	 * Ajouter un professeur à la liste des professeurs
+	 * @param prenom
+	 * @param nom
+	 * @param nas
+	 * @return
+	 */
+	public Professeur embaucherProfesseur(String prenom, String nom, int nas) {
+		Professeur e = new Professeur(prenom, nom, nas);
+		listeProfesseur.add(e);
+		return e;
+	}
+	
+	/**
 	 * Ajouter un cours dans la liste de cours
 	 * @param num : Le numéro du cours
 	 * @return l'instance de l'objet Cours créée
@@ -78,8 +91,26 @@ public class Cegep {
 		return null;
 	}
 	
-	public void inscrireBenevole(Personne benevole) {
-		benevoles.add(benevole);
+	/**
+	 * Ajouter un benevole à la liste de bénévoles
+	 * @param benevole : Un objet Professeur ou Etudiant
+	 */
+	public void ajouterBenevole(Personne benevole) {
+		listeBenevoles.add(benevole);
+	}
+	
+	/**
+	 * Rechercher une personne par son nom de famille
+	 * @param nom : Le nom de famille de la personne
+	 * @return La liste de personne avec ce nom de famille
+	 */
+	public ArrayList<Personne> rechercheBenevole(String nom) {
+		ArrayList<Personne> trouve = new ArrayList<Personne>();
+		for (Personne e : listeBenevoles) {
+			if (e.nom.equals(nom))
+				trouve.add(e);
+		}
+		return trouve;
 	}
 
 }

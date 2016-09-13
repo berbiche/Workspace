@@ -7,8 +7,8 @@ public class Etudiant extends Personne {
 	public String getNumDossier() {
 		return noDossier;
 	}
-	
-	Etudiant(String noDossier) {
+
+	protected Etudiant(String noDossier) {
 		this("", "", noDossier);
 	}
 
@@ -25,7 +25,7 @@ public class Etudiant extends Personne {
 	
 	@Override
 	public String toString() {
-		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", noDossier=" + noDossier + "]";
+		return "Etudiant [noDossier=" + noDossier + ", nom=" + nom + ", prenom=" + prenom + "]";
 	}
 	
 }
