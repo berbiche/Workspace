@@ -1,0 +1,60 @@
+﻿@model CarnetAddresse.Models.Contact
+
+@{
+	ViewBag.Title = "Details";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>Details</h2>
+
+<div>
+	<h4>Contact</h4>
+	<hr />
+	<table class="table">
+		<tr>
+			<th>
+				@Html.Label("Id", "Id")
+			</th>
+			<th>
+				@Html.Label("Nom", "Nom")
+			</th>
+			<th>
+				@Html.Label("Telephone", "Téléphone")
+			</th>
+			<th>
+				@Html.Label("Courriel", "Courriel")
+			</th>
+			<th>
+				@Html.Label("DateNaissance", "Date de naissance")
+			</th>
+			<th>
+				@Html.Label("CodePostal", "Code postal")
+			</th>
+		</tr>
+		<tr>
+			<td>
+				@Html.DisplayFor(model=> model.id)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Nom)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Telephone)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Courriel)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.DateNaissance)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.CodePostal)
+			</td>
+		</tr>
+
+	</table>
+
+</div>
+<p>
+	@Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+	@Html.ActionLink("Back to List", "Index")
+</p>

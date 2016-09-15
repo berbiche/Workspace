@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Contact>
+    <id>1</id>
+    <Nom>Nicolas</Nom>
+    <Telephone>123</Telephone>
+    <Courriel>123</Courriel>
+    <DateNaissance xsi:nil="true" />
+    <CodePostal>123</CodePostal>
+  </Contact>
+  <Contact>
+    <id>2</id>
+    <Nom>asd</Nom>
+    <Telephone>123</Telephone>
+    <Courriel>asd@asd.com</Courriel>
+    <DateNaissance>2012-10-10T00:00:00</DateNaissance>
+    <CodePostal>123</CodePostal>
+  </Contact>
+  <Contact>
+    <id>4</id>
+    <Nom>Wil</Nom>
+    <Telephone>10-10-710</Telephone>
+    <Courriel>foo@bar</Courriel>
+    <DateNaissance>2012-10-10T00:00:00</DateNaissance>
+    <CodePostal>f00b4r</CodePostal>
+  </Contact>
+  <Contact>
+    <id>6</id>
+    <Nom>Wil</Nom>
+    <Telephone>10-10-710</Telephone>
+    <Courriel>foo@bar</Courriel>
+    <DateNaissance>2001-09-11T00:00:00</DateNaissance>
+    <CodePostal>foobar</CodePostal>
+  </Contact>
+</ArrayOfContact>

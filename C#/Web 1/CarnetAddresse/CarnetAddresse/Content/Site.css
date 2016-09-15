@@ -1,0 +1,16 @@
+﻿body {
+    padding: 50px 15px 50px 15px;
+}
+
+table {
+	border-collapse: collapse
+}
+
+tr, td, th {
+	border: 1px solid #DDD;
+	padding: 8px
+}
+
+tr:nth-of-type(even) {
+	background-color: #DDD;
+}

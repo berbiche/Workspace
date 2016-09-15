@@ -1,0 +1,65 @@
+﻿@model CarnetAddresse.Models.Contact
+
+@{
+    ViewBag.Title = "Delete";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Contact</h4>
+    <hr />
+	<table class="table">
+		<tr>
+			<th>
+				@Html.Label("Id", "Id")
+			</th>
+			<th>
+				@Html.Label("Nom", "Nom")
+			</th>
+			<th>
+				@Html.Label("Telephone", "Téléphone")
+			</th>
+			<th>
+				@Html.Label("Courriel", "Courriel")
+			</th>
+			<th>
+				@Html.Label("DateNaissance", "Date de naissance")
+			</th>
+			<th>
+				@Html.Label("CodePostal", "Code postal")
+			</th>
+		</tr>
+		<tr>
+			<td>
+				@Html.DisplayFor(model => model.id)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Nom)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Telephone)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Courriel)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.DateNaissance)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.CodePostal)
+			</td>
+		</tr>
+
+	</table>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
