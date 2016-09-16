@@ -8,15 +8,15 @@ public class Etudiant extends Personne {
 		return noDossier;
 	}
 
-	protected Etudiant(String noDossier) {
+	Etudiant(String noDossier) {
 		this("", "", noDossier);
 	}
 
 	/**
-	 * Constructeur par défaut d'Étudiant
+	 * Constructeur par dÃ©faut d'Ã‰tudiant
 	 * @param nom : Le nom de famille
-	 * @param prenom : Le prénom
-	 * @param noDossier : Le numéro de dossier unique
+	 * @param prenom : Le prÃ©nom
+	 * @param noDossier : Le numÃ©ro de dossier unique
 	 */
 	Etudiant(String nom, String prenom, String noDossier) {
 		super(nom, prenom);
