@@ -3,7 +3,7 @@ package cegep;
 public class Cours {
 	
 	private String nom;
-	private int numero, longueur;
+	private int numero, duree;
 	
 	public String getNom() {
 		return nom;
@@ -12,10 +12,10 @@ public class Cours {
 		this.nom = nom;
 	}
 	public int getLongueur() {
-		return longueur;
+		return duree;
 	}
-	public void setLongueur(int longueur) {
-		this.longueur = longueur;
+	public void setLongueur(int duree) {
+		this.duree = duree;
 	}
 	public int getNumero() {
 		return numero;
@@ -26,15 +26,15 @@ public class Cours {
 	}
 	
 	/**
-	 * @param numero : Le numéro du cours
+	 * @param numero : Le numÃ©ro du cours
 	 * @param nom : Le nom du cours
 	 * @param longueur : La longueur de prestation du cours
 	 */
-	Cours(int numero, String nom, int longueur) {
+	Cours(int numero, String nom, int duree) {
 		super();
 		this.numero = numero;
 		this.nom = nom;
-		this.longueur = longueur;
+		this.duree = duree;
 	}
 	
 }
