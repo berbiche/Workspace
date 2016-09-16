@@ -7,13 +7,18 @@ public class Professeur extends Personne {
 	public int getNas() {
 		return nas;
 	}
+	
+	Professeur(String nas) {
+		super("", "");
+		this.nas = nas;
+	}
 
 	/**
-	 * @param nom : Le nom de famille
-	 * @param prenom : Le prénom
-	 * @param nas : Le numéro d'assurance sociale
+	 * @param nom
+	 * @param prenom
+	 * @param nas
 	 */
-	protected Professeur(String nom, String prenom, int nas) {
+	Professeur(String nom, String prenom, int nas) {
 		super(nom, prenom);
 		this.nas = nas;
 	}
@@ -25,7 +30,7 @@ public class Professeur extends Personne {
 
 	@Override
 	public String payerStationnement() {
-		return nom + " " + prenom + " a payé 250$ de stationnement";
+		return nom + " " + prenom + " a payÃ© 250$ de stationnement";
 	}
 	
 	
