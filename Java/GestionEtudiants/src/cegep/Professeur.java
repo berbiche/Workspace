@@ -2,37 +2,35 @@ package cegep;
 
 public class Professeur extends Personne {
 	
-	private int nas;
+	private String NAS;
 	
-	public int getNas() {
+	public String getNas() {
 		return nas;
 	}
 	
-	Professeur(String nas) {
+	Professeur(String NAS) {
 		super("", "");
-		this.nas = nas;
+		this.NAS= NAS;
 	}
 
 	/**
 	 * @param nom
 	 * @param prenom
-	 * @param nas
+	 * @param NAS
 	 */
-	Professeur(String nom, String prenom, int nas) {
+	Professeur(String nom, String prenom, String NAS) {
 		super(nom, prenom);
-		this.nas = nas;
+		this.NAS = NAS;
 	}
 
 	@Override
 	public String toString() {
-		return "Professeur [nas=" + nas + ", nom=" + nom + ", prenom=" + prenom + "]";
+		return "Professeur [NAS=" + NAS + ", nom=" + nom + ", prenom=" + prenom + "]";
 	}
 
 	@Override
 	public String payerStationnement() {
 		return nom + " " + prenom + " a payé 250$ de stationnement";
 	}
-	
-	
 	
 }
