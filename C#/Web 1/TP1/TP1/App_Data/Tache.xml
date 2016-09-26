@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Tache>
+    <id>1</id>
+    <Description>Test 1</Description>
+    <Client>Vincent</Client>
+    <Priority>3</Priority>
+    <Due>2016-10-06T00:00:00</Due>
+    <Done>false</Done>
+  </Tache>
+</ArrayOfTache>

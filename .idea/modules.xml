@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Workspace.iml" filepath="$PROJECT_DIR$/.idea/Workspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Python/mysite/.idea/mysite.iml" filepath="$PROJECT_DIR$/Python/mysite/.idea/mysite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Python/tutorial_django/.idea/tutorial_django.iml" filepath="$PROJECT_DIR$/Python/tutorial_django/.idea/tutorial_django.iml" />
     </modules>
   </component>
 </project>

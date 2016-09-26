@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d51147f-913e-4249-afa6-e9d5100fc53c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/principal/CegepTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cegep/Principal.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GestionEtudiants.iml" afterPath="$PROJECT_DIR$/GestionEtudiants.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cegep/Professeur.java" afterPath="$PROJECT_DIR$/src/cegep/Professeur.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../UML-Java.dia" afterPath="$PROJECT_DIR$/../../UML-Java.dia" />
     </list>
     <ignored path="GestionEtudiants.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,8 +78,8 @@
       <file leaf-file-name="Professeur.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cegep/Professeur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+            <state relative-caret-position="136">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding>
                 <element signature="e#519#520#0" expanded="true" />
                 <element signature="e#585#586#0" expanded="true" />
@@ -708,12 +702,12 @@
       <option name="presentableId" value="Default" />
       <updated>1472917226904</updated>
       <workItem from="1472917239477" duration="167000" />
-      <workItem from="1474084510873" duration="542000" />
+      <workItem from="1474084510873" duration="1319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="709000" />
+    <option name="totallyTimeSpent" value="1486000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,8 +835,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cegep/Professeur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+        <state relative-caret-position="136">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
             <element signature="e#519#520#0" expanded="true" />
             <element signature="e#585#586#0" expanded="true" />
