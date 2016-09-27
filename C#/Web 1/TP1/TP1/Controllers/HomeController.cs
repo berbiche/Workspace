@@ -13,5 +13,12 @@ namespace TP1.Controllers
         {
             return View();
         }
+
+        // GET: Apropos
+        [Route("Apropos")]
+        public ActionResult Apropos()
+        {
+            return View();
+        }
     }
 }

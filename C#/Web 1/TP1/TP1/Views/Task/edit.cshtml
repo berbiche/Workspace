@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>edit</h2>
+<h2>Éditer </h2>
 
 
 @using (Html.BeginForm())
@@ -52,8 +52,7 @@
             @Html.LabelFor(model => model.Done, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Done)
-                    @Html.ValidationMessageFor(model => model.Done, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Done) Terminée
                 </div>
             </div>
         </div>
@@ -67,5 +66,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retour à la liste de tâche", "Index")
 </div>

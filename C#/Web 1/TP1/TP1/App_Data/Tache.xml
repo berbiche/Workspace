@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Tache>
-    <id>1</id>
+    <Id>0</Id>
     <Description>Test 1</Description>
     <Client>Vincent</Client>
     <Priority>3</Priority>
     <Due>2016-10-06T00:00:00</Due>
+    <Creation>0001-01-01T00:00:00</Creation>
+    <ClosedDate xsi:nil="true" />
+    <Done>false</Done>
+  </Tache>
+  <Tache>
+    <Id>4</Id>
+    <Description>1</Description>
+    <Client>1</Client>
+    <Priority>0</Priority>
+    <Due>0001-01-01T00:00:00</Due>
+    <Creation>0001-01-01T00:00:00</Creation>
+    <ClosedDate xsi:nil="true" />
     <Done>false</Done>
   </Tache>
 </ArrayOfTache>

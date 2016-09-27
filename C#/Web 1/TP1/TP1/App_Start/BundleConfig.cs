@@ -25,6 +25,7 @@ namespace TP1
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-theme.css",
                       "~/Content/site.css"));
 
             // Définissez EnableOptimizations sur False pour le débogage. Pour plus d'informations,

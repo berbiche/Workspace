@@ -1,1 +1,38 @@
-﻿@RenderBody()
+﻿@Styles.Render("~/Content/css")
+<body class="col-xs-offset-1 col-xs-10">
+    <header>
+        <div class="image-center"></div>
+        <nav class="">
+            <ul class="nav nav-tabs">
+                <li id="acceuil">@Html.ActionLink("accueil", "Index", "Home")</li>
+                <li id="apropos">@Html.ActionLink("à propos", "Apropos", "Home")</li>
+                <li id="listeTache">@Html.ActionLink("mes tâches", "Index", "Task")</li>
+                <li id="createTache">@Html.ActionLink("nouvelle tâche", "Create", "Task")</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        @RenderBody()
+    </section>
+    <footer>
+        <p>© Nicolas Berbiche et Vincent Turgeon pour le TP1</p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script>
+        var a = window.location.pathname;
+        console.log(typeof a);
+        if (/^\/Home\/Apropos$/i.test(a))
+            $('#apropos').addClass('active');
+        else if (/^\/$/.test(a))
+            $('#acceuil').addClass('active');
+        else if (/^\/Task\/Create$/i.test(a))
+            $('#createTache').addClass('active');
+        else
+            $('#listeTache').addClass('active');
+        console.log(`L'url est '${a}' sur le site`);
+    </script>
+</body>

@@ -5,63 +5,66 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>details</h2>
-
-<div>
-    <h4>Tache</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
+<h2>Détails @Model.Id</h2>
+<hr />
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Client)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Client)
-        </dd>
-
-        <dt>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Priority)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Priority)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Due)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Due)
-        </dd>
-
-        <dt>
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Creation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Creation)
-        </dd>
-
-        <dt>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Due)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClosedDate)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Done)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Done)
-        </dd>
-
-    </dl>
-</div>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Client)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Priority)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Creation)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Due)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ClosedDate)
+        </td>
+        <td>
+            @if (Model.Done)
+            { <span>Terminée</span> }
+            else
+            { <span>Incomplète</span> }
+        </td>
+    </tr>
+</table>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Éditer", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste de tâche", "Index")
 </p>
