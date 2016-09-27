@@ -3,7 +3,7 @@
     <header>
         <div class="image-center"></div>
         <nav class="">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs nav-justified">
                 <li id="acceuil">@Html.ActionLink("accueil", "Index", "Home")</li>
                 <li id="apropos">@Html.ActionLink("à propos", "Apropos", "Home")</li>
                 <li id="listeTache">@Html.ActionLink("mes tâches", "Index", "Task")</li>
@@ -24,7 +24,6 @@
 
     <script>
         var a = window.location.pathname;
-        console.log(typeof a);
         if (/^\/Home\/Apropos$/i.test(a))
             $('#apropos').addClass('active');
         else if (/^\/$/.test(a))
@@ -32,7 +31,6 @@
         else if (/^\/Task\/Create$/i.test(a))
             $('#createTache').addClass('active');
         else
-            $('#listeTache').addClass('active');
-        console.log(`L'url est '${a}' sur le site`);
+            $('#listeTache').addClass('active');S
     </script>
 </body>

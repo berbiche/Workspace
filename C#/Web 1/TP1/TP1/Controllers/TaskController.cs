@@ -10,7 +10,7 @@ namespace TP1.Controllers
     public class TaskController : Controller
     {
         private PersistentList<Tache> depot = new PersistentList<Tache>();
-        private const string Erreur = "~/Views/Sahred/Error.cshtml";
+        private const string Erreur = "~/Views/Shared/Error.cshtml";
 
         // GET: Task
         public ActionResult Index()
@@ -38,6 +38,9 @@ namespace TP1.Controllers
         {
             try
             {
+                newTache.Creation = DateTime.Now;
+                if (newTache.Creation.CompareTo(newTache.Due) == 1)
+                    return View(Erreur);
                 depot.Add(newTache);
                 depot.SaveChanges();
                 return RedirectToAction("Index");
@@ -63,6 +66,7 @@ namespace TP1.Controllers
             {
                 Tache oldTache = depot.Find(p => p.Id == id);
                 int index = depot.IndexOf(oldTache);
+                newTache.Creation = oldTache.Creation;
                 depot[index] = newTache;
                 depot.SaveChanges();
                 return RedirectToAction("Index");
@@ -76,7 +80,7 @@ namespace TP1.Controllers
         // GET: Default/Delete/5
         public ActionResult Delete(int id)
         {
-	        Tache toDeleteTache = depot.Find(p => p.Id == id);
+            Tache toDeleteTache = depot.Find(p => p.Id == id);
             return View(toDeleteTache);
         }
 
@@ -93,7 +97,22 @@ namespace TP1.Controllers
             }
             catch
             {
-	            return View(Erreur);
+                return View(Erreur);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult Terminate(int id)
+        {
+            try
+            {
+                depot.Find(p => p.Id == id).Done = true;
+                depot.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(Erreur);
             }
         }
     }

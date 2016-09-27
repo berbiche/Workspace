@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfTache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Tache>
-    <Id>0</Id>
-    <Description>Test 1</Description>
-    <Client>Vincent</Client>
+    <Id>1</Id>
+    <Description>Terminer TP1 Web</Description>
+    <Client>Vincent &amp; Nicolas</Client>
     <Priority>3</Priority>
     <Due>2016-10-06T00:00:00</Due>
-    <Creation>0001-01-01T00:00:00</Creation>
-    <ClosedDate xsi:nil="true" />
-    <Done>false</Done>
+    <Creation>2016-09-27T16:30:47.4942248-04:00</Creation>
+    <ClosedDate>2016-09-27T17:01:03.7058951-04:00</ClosedDate>
+    <Done>true</Done>
   </Tache>
   <Tache>
-    <Id>4</Id>
-    <Description>1</Description>
-    <Client>1</Client>
-    <Priority>0</Priority>
-    <Due>0001-01-01T00:00:00</Due>
-    <Creation>0001-01-01T00:00:00</Creation>
+    <Id>2</Id>
+    <Description>gg</Description>
+    <Client>robert</Client>
+    <Priority>1</Priority>
+    <Due>2017-01-01T00:00:00</Due>
+    <Creation>2016-09-27T16:47:56.1031415-04:00</Creation>
     <ClosedDate xsi:nil="true" />
     <Done>false</Done>
   </Tache>

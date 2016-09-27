@@ -37,12 +37,9 @@ header a {
 
 header li.active a {
     color: red !important;
-    border: 0 !important;
-    bottom: -2px;
 }
 
 section {
-    height: 650px;
     margin: 0;
     padding: 20px;
     background-color: white;
