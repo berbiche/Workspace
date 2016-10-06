@@ -38,12 +38,16 @@ namespace TP1.Controllers
         {
             try
             {
-                newTache.Creation = DateTime.Now;
-                if (newTache.Creation.CompareTo(newTache.Due) == 1)
-                    return View(Erreur);
-                depot.Add(newTache);
-                depot.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    newTache.Creation = DateTime.Now;
+                    if (newTache.Creation.CompareTo(newTache.Due) == 1)
+                        return View(Erreur);
+                    depot.Add(newTache);
+                    depot.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(Erreur);
             }
             catch
             {
@@ -64,12 +68,16 @@ namespace TP1.Controllers
         {
             try
             {
-                Tache oldTache = depot.Find(p => p.Id == id);
-                int index = depot.IndexOf(oldTache);
-                newTache.Creation = oldTache.Creation;
-                depot[index] = newTache;
-                depot.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    Tache oldTache = depot.Find(p => p.Id == id);
+                    int index = depot.IndexOf(oldTache);
+                    newTache.Creation = oldTache.Creation;
+                    depot[index] = newTache;
+                    depot.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(Erreur);
             }
             catch
             {

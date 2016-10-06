@@ -1,31 +1,37 @@
 package cegep;
 
+import java.util.ArrayList;
+
 public class Etudiant extends Personne {
 	
 	private String noDossier;
+    private ArrayList<Note> notes;
 
-	public String getNumDossier() {
+	public String getNoDossier() {
 		return noDossier;
 	}
+
+	public ArrayList<Note> getNotes() {
+        return notes;
+    }
 
 	Etudiant(String noDossier) {
 		this("", "", noDossier);
 	}
 
-	/**
-	 * Constructeur par défaut d'Étudiant
-	 * @param nom : Le nom de famille
-	 * @param prenom : Le prénom
-	 * @param noDossier : Le numéro de dossier unique
-	 */
-	Etudiant(String nom, String prenom, String noDossier) {
-		super(nom, prenom);
+	Etudiant(String nomFamille, String prenom, String noDossier) {
+		super(nomFamille, prenom);
+        notes = new ArrayList<Note>();
 		this.noDossier = noDossier;
 	}
+
+    void ajouterNote(Note n) {
+        notes.add(n);
+    }
 	
 	@Override
 	public String toString() {
-		return "Etudiant [noDossier=" + noDossier + ", nom=" + nom + ", prenom=" + prenom + "]";
+		return "Etudiant: " + noDossier + ", " + nomFamille + ", " + prenom;
 	}
 	
 }

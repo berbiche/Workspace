@@ -4,76 +4,130 @@ import java.util.ArrayList;
 
 public class CoursGroupe {
 	
-//	Variables priv�es
-	private Cours leCours;
-	private int numeroGroupe;
-	private String session, local;
-	private Professeur prof;
-	private ArrayList<Etudiant> listeEtudiant;
+//	Variables privées
+	private Cours cours;
+	private int noGroupe;
+	private String session, noLocal;
+	private Professeur professeur;
+    private ArrayList<Etudiant> listeEtudiant;
+	private ArrayList<Note> notes;
 	
 //	Getters et Setters
-	public String getLocal() {
-		return local;
+	public String getNoLocal() {
+		return noLocal;
 	}
-	public void setLocal(String local) {
-		this.local = local;
+	public void setNoLocal(String noLocal) {
+		this.noLocal = noLocal;
 	}
-	public Professeur getProf() {
-		return prof;
+	public Professeur getProfesseur() {
+		return professeur;
 	}
-	public void setProf(Professeur prof) {
-		this.prof = prof;
+	public void setProfesseur(Professeur professeur) {
+		this.professeur = professeur;
 	}
-	public Cours getLeCours() {
-		return leCours;
+	public Cours getCours() {
+		return cours;
 	}
-	public int getNumeroGroupe() {
-		return numeroGroupe;
+	public int getNoGroupe() {
+		return noGroupe;
 	}
 	public String getSession() {
 		return session;
 	}
 	
 	/**
-	 * @param leCours : Instance de l'objet Cours
-	 * @param numeroGroupe : le num�ro du groupe
-	 * @param session : le num�ro de la session
+	 * @param cours Instance de l'objet Cours
+	 * @param noGroupe le numéro du groupe
+	 * @param session le numéro de la session
 	 */
-	public CoursGroupe(Cours leCours, int numeroGroupe, String session) {
-		super();
-		listeEtudiant = new ArrayList<Etudiant>();
-		this.leCours = leCours;
-		this.numeroGroupe = numeroGroupe;
+	public CoursGroupe(Cours cours, int noGroupe, String session) {
+        this.notes = new ArrayList<Note>();
+        this.listeEtudiant = new ArrayList<Etudiant>();
+		this.cours = cours;
+		this.noGroupe = noGroupe;
 		this.session = session;
 	}
-	
-	/**
-	 * Ajouter un �tudiant par son instance
-	 * @param e : Instance de l'objet �tudiant
-	 */
-	public void ajoutEtudiant(Etudiant e) {
-		listeEtudiant.add(e);
-	}
-	
-	/**
-	 * Retirer un �tudiant par son num�ro de dossier
-	 * @param noDossier : Le num�ro de dossier de l'�tudiant
-	 */
-	public void retirerEtudiant(String noDossier) {
-		for (int i = 0; i < listeEtudiant.size(); i++) {
-			if (listeEtudiant.get(i).getNumDossier().equals(noDossier)) {
-				listeEtudiant.remove(i);
-				break;
-			}
-		}
-	}
-	
-	/**
-	 * Retirer un �tudiant par son instance dans la liste d'�tudiant
-	 * @param e
-	 */
-	public void retirerEtudiant(Etudiant e) {
-		listeEtudiant.remove(e);
-	}
-	
+
+    /**
+     * Inscrit l'étudiant au CoursGroupe
+     * @param etudiant
+     */
+	public void inscrireEtudiant(Etudiant etudiant) {
+        listeEtudiant.add(etudiant);
+    }
+
+    /**
+     * Recherche un étudiant dans la liste d'étudiant
+     * @param noDossier le numéro de dossier de l'étudiant
+     * @return l'instance de l'étudiant trouvée ou NULL
+     */
+    public Etudiant getEtudiant(String noDossier) {
+        for (Etudiant e: listeEtudiant) {
+            if (e.getNoDossier().equals(noDossier))
+                return e;
+        }
+        return null;
+    }
+
+    /**
+     * Retire un étudiant du cours
+     * @param noDossier le numéro de dossier de l'étudiant
+     * @return le succès de l'opération
+     */
+    public boolean retirerEtudiant(String noDossier) {
+        for (int i = 0; i < listeEtudiant.size(); i++) {
+            if (listeEtudiant.get(i).getNoDossier().equals(noDossier)) {
+                listeEtudiant.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Retire un étudiant du cours
+     * @param etudiant
+     * @return le succès de l'opération
+     */
+    public boolean retirerEtudiant(Etudiant etudiant) {
+        return listeEtudiant.remove(etudiant);
+    }
+
+    /**
+     * Retourne la note d'un étudiant
+     * @param etudiant l'instance Etudiant
+     * @return -1 si étudiant non trouvé
+     */
+	public int getNoteEtudiant(Etudiant etudiant) {
+        for (Note n: notes) {
+            if (n.getEtudiant().equals(etudiant))
+                return n.getResultat();
+        }
+        return -1;
+    }
+
+    /**
+     * Retourne la note d'un étudiant
+     * @param noDossier le numéro de dossier de l'étudiant
+     * @return -1 si étudiant non trouvé
+     */
+    public int getNoteEtudiant(String noDossier) {
+        for (Note n: notes) {
+            if (n.getEtudiant().getNoDossier().equals(noDossier))
+                return n.getResultat();
+        }
+        return -1;
+    }
+
+    /**
+     * Ajouter une note à un étudiant
+     * @param etudiant instance de l'objet Etudiant
+     * @param resultat le résultat de l'étudiant
+     */
+    public void ajouterNote(Etudiant etudiant, int resultat) {
+        Note n = new Note(etudiant, this, resultat);
+        notes.add(n);
+        etudiant.ajouterNote(n);
+    }
+
 }

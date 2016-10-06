@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Web.UI.WebControls;
 
 namespace TP1.Models
 {
@@ -21,6 +22,7 @@ namespace TP1.Models
         public int Priority { get; set; }
         [Required(ErrorMessage = "La date d'écheance est requise")]
         [DataType(DataType.DateTime)]
+        [VerifyDate]
         [Timestamp, Display(Name = "Échéance")]
         public DateTime Due { get; set; }
         [Display(Name = "Date de création")]

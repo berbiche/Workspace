@@ -1,6 +1,7 @@
-package Principal;
+package principal;
 
 import java.util.*;
+import cegep.*;
 
 import static org.junit.Assert.*;
 
@@ -20,8 +21,12 @@ public class CegepTest {
 		e1 = cegep.admettreEtudiant("Tremblay", "Robert");
 		e2 = cegep.admettreEtudiant("Jacques", "Jean");
 		e3 = cegep.admettreEtudiant("Tremblay", "William");
-		c = cegep.ajouterCours("420-D61", "PO et Structures de données", 6);
+		c = cegep.ajouterCours("420-D61", "PO et Structures de donnï¿½es", 6);
 		cg = cegep.ajouterCoursGroupe(c, 1, "A14");
+	}
+
+	public static void main(String[] args) {
+
 	}
 
 	@Test
@@ -58,7 +63,7 @@ public class CegepTest {
 	public void testCoursStringStringInt() {
 		// Setup
 		String noCours = "420-D61";
-		String nom = "PO et Structures de données";
+		String nom = "PO et Structures de donnï¿½es";
 		int nbHeures = 6;
 		
 		// Act

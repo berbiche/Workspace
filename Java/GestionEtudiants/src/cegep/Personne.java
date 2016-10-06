@@ -1,15 +1,15 @@
 package cegep;
 
-public abstract class Personne {
+public class Personne {
 	
-	protected String nom, prenom;
+	protected String nomFamille, prenom;
 	
-	public String getNom() {
-		return nom;
+	public String getNomFamille() {
+		return nomFamille;
 	}
-	
-	public void setNom(String nom) {
-		this.nom = nom;
+
+	public void setNomFamille(String nomFamille) {
+		this.nomFamille = nomFamille;
 	}
 	
 	public String getPrenom() {
@@ -20,19 +20,14 @@ public abstract class Personne {
 		this.prenom = prenom;
 	}
 	
-	protected Personne(String nom, String prenom) {
-		this.nom = nom;
+	protected Personne(String nomFamille, String prenom) {
+		this.nomFamille = nomFamille;
 		this.prenom = prenom;
-	}
-	
-	public String payerStationnement() {
-		return nom + " " + prenom + " a payé 300$ de stationnement";
 	}
 
 	@Override
 	public String toString() {
-		return "Personne [nom=" + nom + ", prenom=" + prenom + "]";
+		return "Personne: " + nomFamille + ", " + prenom;
 	}
-	
 	
 }

@@ -2,8 +2,8 @@ package cegep;
 
 public class Cours {
 	
-	private String nom;
-	private int numero, duree;
+	private String nom, noCours;
+	private int nbHeures;
 	
 	public String getNom() {
 		return nom;
@@ -11,30 +11,30 @@ public class Cours {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public int getLongueur() {
-		return duree;
+	public int getNbHeures() {
+		return nbHeures;
 	}
-	public void setLongueur(int duree) {
-		this.duree = duree;
+	public void setNbHeures(int nbHeures) {
+		this.nbHeures = nbHeures;
 	}
-	public int getNumero() {
-		return numero;
-	}
-	
-	Cours(int numero) {
-		this(numero, "", 0);
+	public String getNoCours() {
+		return noCours;
 	}
 	
-	/**
-	 * @param numero : Le numéro du cours
-	 * @param nom : Le nom du cours
-	 * @param longueur : La longueur de prestation du cours
-	 */
-	Cours(int numero, String nom, int duree) {
+	Cours(String noCours) {
+		this(noCours, "", 0);
+	}
+
+	Cours(String noCours, String nom, int nbHeures) {
 		super();
-		this.numero = numero;
+		this.noCours = noCours;
 		this.nom = nom;
-		this.duree = duree;
+		this.nbHeures = nbHeures;
+	}
+
+	@Override
+	public String toString() {
+		return "Cours: " + noCours + ", " + nom + ", " + nbHeures;
 	}
 	
 }

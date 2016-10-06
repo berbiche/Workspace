@@ -7,92 +7,159 @@ public class Cegep {
 	private ArrayList<Etudiant> listeEtudiant;
 	private ArrayList<Professeur> listeProfesseur;
 	private ArrayList<Cours> listeCours;
+	private ArrayList<CoursGroupe> listeCoursGroupe;
 	private ArrayList<Personne> listeBenevoles;
+    private int numDossierEtudiant;
 
 	public Cegep() {
 		listeEtudiant = new ArrayList<Etudiant>();
 		listeProfesseur = new ArrayList<Professeur>();
 		listeCours = new ArrayList<Cours>();
 		listeBenevoles = new ArrayList<Personne>();
+        listeCoursGroupe = new ArrayList<CoursGroupe>();
+        numDossierEtudiant = 0;
 	}
 	
 	/**
-	 * Ajoute un Ètudiant avec un numÈro de dossier;
-	 * @param noDossier : Liste de numÈro de dossier (1 ou + dossier)
-	 * @return l'instance de l'objet Etudiant crÈÈe
+	 * Ajoute un √©tudiant avec un num√©ro de dossier;
+	 * @param noDossier le num√©ro de dossier de l'√©tudiant
+	 * @return l'instance de l'objet Etudiant cr√©√©e
 	 */
-	public Etudiant ajoutEtudiant(String noDossier) {
+	public Etudiant admettreEtudiant(String noDossier) {
 		Etudiant e = new Etudiant(noDossier);
 		listeEtudiant.add(e);
 		return e;
 	}
+
+    /**
+     * Ajoute un √©tudiant avec un num√©ro de dossier
+     * @param nomFamille le nom de famille
+     * @param prenom le pr√©nom
+     * @return l'instance de l'objet Etudiant cr√©√©e
+     */
+	public Etudiant admettreEtudiant(String nomFamille, String prenom) {
+        Etudiant e = new Etudiant(nomFamille, prenom, (numDossierEtudiant++)+"");
+        listeEtudiant.add(e);
+        return e;
+    }
 	
 	/**
-	 * Rechercher un Ètudiant par son numÈro de dossier
-	 * @param noDossier : Le numÈro de dossier de l'Ètudiant
-	 * @return null si aucun Ètudiant possËde ce numÈro de dossier sinon Etudiant
+	 * Rechercher un √©tudiant par son num√©ro de dossier
+	 * @param noDossier Le num√©ro de dossier de l'√©tudiant
+	 * @return null si aucun √©tudiant poss√©de ce num√©ro de dossier sinon Etudiant
 	 */
-	public Etudiant getEtudiantByNoDossier(String noDossier) {
+	public Etudiant getEtudiant(String noDossier) {
 		for (Etudiant e: listeEtudiant) {
-			if (e.getNumDossier().equals(noDossier))
+			if (e.getNoDossier().equals(noDossier))
 				return e;
 		}
 		return null;
 	}
-	
+
 	/**
-	 * Rechercher tous les Ètudiants avec un nom de famille donnÈ
-	 * @param nom : Le nom de famille recherchÈ
-	 * @return la liste d'Ètudiant avec le nom donnÈ
+	 * Rechercher tous les √©tudiants avec un nom de famille donn√©
+	 * @param nomFamille Le nom de famille recherch√©
+	 * @return la liste d'√©tudiant avec le nom donn√©
 	 */
-	public ArrayList<Etudiant> getAllEtudiantsByNomFamille(String nom) {
+	public ArrayList<Etudiant> rechercherEtudiant(String nomFamille) {
 		ArrayList<Etudiant> etudiants = new ArrayList<Etudiant>();
 		for (Etudiant i: listeEtudiant) {
-			if (i.getNom().equals(nom))
+			if (i.getNomFamille().equals(nomFamille))
 				etudiants.add(i);
 		}
 		return etudiants;
 	}
-	
+
 	/**
-	 * Ajouter un professeur ‡ la liste des professeurs
-	 * @param nom
+	 * Ajouter un professeur √† la liste des professeurs
+	 * @param nomFamille
 	 * @param prenom
-	 * @param nas
-	 * @return
+	 * @param NAS
+	 * @return l'instance de l'objet Professeur cr√©√©e
 	 */
-	public Professeur embaucherProfesseur(String nom, String prenom, int nas) {
-		Professeur e = new Professeur(nom, prenom, nas);
+	public Professeur embaucherProfesseur(String NAS, String nomFamille, String prenom) {
+		Professeur e = new Professeur(nomFamille, prenom, NAS);
 		listeProfesseur.add(e);
 		return e;
 	}
+
+	public Professeur getProfesseur(String NAS) {
+        for (Professeur p: listeProfesseur) {
+            if (p.getNAS().equals(NAS))
+                return p;
+        }
+        return null;
+    }
 	
 	/**
 	 * Ajouter un cours dans la liste de cours
-	 * @param num : Le numÈro du cours
-	 * @return l'instance de l'objet Cours crÈÈe
+	 * @param numero Le num√©ro du cours
+	 * @return l'instance de l'objet Cours cr√©√©e
 	 */
-	public Cours ajoutCours(int num) {
-		Cours e = new Cours(num);
+	public Cours ajouterCours(String numero) {
+		Cours e = new Cours(numero);
 		listeCours.add(e);
 		return e;
 	}
+
+    /**
+     * Ajouter un cours dans la liste de cours
+     * @param numero
+     * @param nom
+     * @param nbHeures
+     * @return l'instance de l'objet Cours cr√©√©e
+     */
+	public Cours ajouterCours(String numero, String nom, int nbHeures) {
+        Cours e = new Cours(numero, nom, nbHeures);
+        listeCours.add(e);
+        return e;
+    }
 	
 	/**
-	 * Chercher un cours par son numÈro de dossier
-	 * @param numero : le numÈro de 
-	 * @return Retourne l'instance du Cours correspondant au numero sinon NULL
+	 * Chercher un cours par son num√©ro
+	 * @param numero le num√©ro de cours
+	 * @return l'instance du Cours correspondante au num√©ro sinon NULL
 	 */
-	public Cours getCoursByNumero(int numero) {
+	public Cours getCours(String numero) {
 		for (Cours e : listeCours)
-			if (e.getNumero() == numero)
+			if (e.getNoCours() == numero)
 				return e;
 		return null;
 	}
+
+    /**
+     * Ajouter un coursgroupe dans la liste de coursgroupe
+     * @param cours
+     * @param noGroupe
+     * @param session
+     * @return l'instance de l'objet CoursGroupe cr√©√©e
+     */
+	public CoursGroupe ajouterCoursGroupe(Cours cours, int noGroupe, String session) {
+        CoursGroupe cg = new CoursGroupe(cours, noGroupe, session);
+        listeCoursGroupe.add(cg);
+        return cg;
+    }
+
+    /**
+     * Chercher un CoursGroupe par son num√©ro
+     * @param noGroupe le num√©ro du CoursGroupe
+     * @return l'instance du CoursGroupe correspondante au num√©ro sinon NULL
+     */
+    public CoursGroupe getCoursGroupe(int noGroupe) {
+        for (CoursGroupe cg: listeCoursGroupe) {
+            if (cg.getNoGroupe() == noGroupe)
+                return cg;
+        }
+        return null;
+    }
+
+    public CoursGroupe getCoursGroupe(String numero, int noGroupe, String session) {
+        return getCoursGroupe(noGroupe);
+    }
 	
 	/**
-	 * Ajouter un benevole ‡ la liste de bÈnÈvoles
-	 * @param benevole : Un objet Professeur ou Etudiant
+	 * Ajouter un benevole √† la liste de b√©n√©voles
+	 * @param benevole un objet Personne
 	 */
 	public void ajouterBenevole(Personne benevole) {
 		listeBenevoles.add(benevole);
@@ -100,13 +167,13 @@ public class Cegep {
 	
 	/**
 	 * Rechercher une personne par son nom de famille
-	 * @param nom : Le nom de famille de la personne
-	 * @return La liste de personne avec ce nom de famille
+	 * @param nomFamille le nom de famille de la personne
+	 * @return la liste de personnes avec le nom de famille
 	 */
-	public ArrayList<Personne> rechercheBenevole(String nom) {
+	public ArrayList<Personne> rechercheBenevole(String nomFamille) {
 		ArrayList<Personne> trouve = new ArrayList<Personne>();
 		for (Personne e : listeBenevoles) {
-			if (e.nom.equals(nom))
+			if (e.nomFamille.equals(nomFamille))
 				trouve.add(e);
 		}
 		return trouve;
