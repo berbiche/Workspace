@@ -6,7 +6,6 @@ public class CoursGroupe {
 	
 //	Variables privées
 	private Cours cours;
-    private int moyenne;
 	private int noGroupe;
 	private String session, noLocal;
 	private Professeur professeur;
@@ -17,33 +16,41 @@ public class CoursGroupe {
 	public String getNoLocal() {
 		return noLocal;
 	}
+
 	public void setNoLocal(String noLocal) {
 		this.noLocal = noLocal;
 	}
+
 	public Professeur getProfesseur() {
 		return professeur;
 	}
+
 	public void setProfesseur(Professeur professeur) {
         if (this.professeur != null)
             this.professeur.retirerCours(this);
 		this.professeur = professeur;
         professeur.ajouterCours(this);
 	}
+
 	public Cours getCours() {
 		return cours;
 	}
-	public int getMoyenne() {
-        return moyenne;
-    }
+
 	public int getNoGroupe() {
 		return noGroupe;
 	}
+
 	public String getSession() {
 		return session;
 	}
+
 	public ArrayList<Etudiant> getListeEtudiant() {
         return listeEtudiant;
 	}
+
+	public ArrayList<Note> getNotes() {
+        return notes;
+    }
 	
 	/**
 	 * @param cours Instance de l'objet Cours
@@ -57,6 +64,21 @@ public class CoursGroupe {
 		this.noGroupe = noGroupe;
 		this.session = session;
 	}
+
+    /**
+     * Calcule la moyenne du groupe
+     * @return
+     */
+    public int getMoyenne() {
+        if (notes.size() > 0) {
+            int moyenne = 0;
+            for (Note n: notes) {
+                moyenne += n.getResultat();
+            }
+            return moyenne / notes.size();
+        }
+        return -1;
+    }
 
     /**
      * Inscrit l'étudiant au CoursGroupe
@@ -147,10 +169,6 @@ public class CoursGroupe {
         return -1;
     }
 
-    boolean ajouterNote(Note n) {
-        return notes.add(n);
-    }
-
     /**
      * Ajouter une note à un étudiant
      * @param etudiant instance de l'objet Etudiant
@@ -161,10 +179,18 @@ public class CoursGroupe {
             Note n = new Note(etudiant, this, resultat);
             notes.add(n);
             etudiant.ajouterNote(n);
-            moyenne += ((resultat - moyenne) / notes.size());
             return true;
         }
         return false;
+    }
+
+    boolean ajouterNote(Note n) {
+        return notes.add(n);
+    }
+
+    public boolean equals(CoursGroupe cg) {
+        return cg.cours.equals(this.cours) && cg.session.equals(this.session)
+               && cg.noGroupe == this.noGroupe;
     }
 
     @Override

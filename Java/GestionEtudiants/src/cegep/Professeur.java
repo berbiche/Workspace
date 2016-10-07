@@ -44,6 +44,14 @@ public class Professeur extends Personne {
         return lesCours;
     }
 
+    public boolean equals(Professeur p) {
+        return p.nomFamille.equals(this.nomFamille) && p.prenom.equals(this.prenom);
+    }
+
+    public int compareTo(Professeur p) {
+        return p.NAS.compareTo(this.NAS);
+    }
+
 	@Override
 	public String toString() {
 		return "Professeur: " + NAS + ", " + nomFamille + ", " + prenom;

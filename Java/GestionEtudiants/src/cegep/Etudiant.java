@@ -1,5 +1,6 @@
 package cegep;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Etudiant extends Personne {
@@ -7,7 +8,6 @@ public class Etudiant extends Personne {
 	private String noDossier;
     private ArrayList<CoursGroupe> cours;
     private ArrayList<Note> notes;
-    private int MOYENNE;
 
 	public String getNoDossier() {
 		return noDossier;
@@ -20,7 +20,6 @@ public class Etudiant extends Personne {
     public ArrayList<CoursGroupe> getCours() {
         return cours;
     }
-
 	Etudiant(String noDossier) {
 		this("", "", noDossier);
 	}
@@ -32,10 +31,6 @@ public class Etudiant extends Personne {
         cours = new ArrayList<CoursGroupe>();
 	}
 
-    boolean ajouterNote(Note n) {
-        return notes.add(n);
-    }
-
     public boolean ajouterNote(CoursGroupe cg, int resultat) {
         if (cours.contains(cg)) {
             Note n = new Note(this, cg, resultat);
@@ -45,25 +40,62 @@ public class Etudiant extends Personne {
         return false;
     }
 
-    boolean ajouterCours(CoursGroupe cg) {
-        return cours.add(cg);
+    public Note getNotesCours(CoursGroupe cg) {
+        for (Note n: notes) {
+            if (n.getCoursGroupe().equals(cg))
+               return n;
+        }
+        return null;
     }
 
-    boolean retirerCours(CoursGroupe cg) {
-        return cours.remove(cg);
+    public ArrayList<Note> getNotesSession(String session) {
+        ArrayList<Note> listeNotes = new ArrayList<Note>();
+        for (Note n: notes) {
+            if (n.getCoursGroupe().getSession().equals(session))
+                listeNotes.add(n);
+        }
+        return listeNotes;
     }
 
     public int getMoyenneCours(CoursGroupe cg) {
-        int moyenne = 0;
-        int count = 0;
-        for (Note n: notes) {
-            if (n.getCoursGroupe() == cg) {
-                moyenne += n.getResultat();
-                count++;
+        if (notes.size() > 0) {
+            int moyenne = 0, count = 0;
+            for (Note n : notes) {
+                if (n.getCoursGroupe() == cg) {
+                    moyenne += n.getResultat();
+                    count++;
+                }
             }
+            return moyenne / count;
         }
-        return moyenne / count;
+        return -1;
     }
+
+    public int getMoyenneSession(String session) {
+        if (notes.size() > 0) {
+            int moyenne = 0, count = 0;
+            for (Note n : notes) {
+                if (n.getCoursGroupe().getSession().equals(session)) {
+                    moyenne += n.getResultat();
+                    count++;
+                }
+            }
+            return moyenne / count;
+        }
+        return -1;
+    }
+
+    public int getMoyenne() {
+        if (notes.size() > 0) {
+            int moyenne = 0;
+            for (Note n : notes) {
+                moyenne += n.getResultat();
+            }
+            return moyenne / notes.size();
+        }
+        return -1;
+    }
+
 
     /**
      * Rechercher le CoursGroupe
@@ -92,8 +124,24 @@ public class Etudiant extends Personne {
         return lesCours;
     }
 
-    public boolean equals(Object o) {
-        return ((Etudiant) o).noDossier == this.noDossier;
+    boolean ajouterNote(Note n) {
+        return notes.add(n);
+    }
+
+    boolean ajouterCours(CoursGroupe cg) {
+        return cours.add(cg);
+    }
+
+    boolean retirerCours(CoursGroupe cg) {
+        return cours.remove(cg);
+    }
+
+    public boolean equals(Etudiant e) {
+        return e.noDossier.equals(this.noDossier);
+    }
+
+    public int compareTo(Etudiant e) {
+        return e.noDossier.compareTo(this.noDossier);
     }
 	
 	@Override

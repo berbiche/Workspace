@@ -6,7 +6,7 @@ Les étudiants du cours-groupe 420-D11, groupe 1, A13 sont:
 	Etudiant: 1001, Tremblay, Mario
 ]
 
-La moyenne du groupe est: 75
+La moyenne du groupe est: -1
 
 La moyenne de Mario Tremblay est de: -1
 
@@ -68,3 +68,61 @@ Les cours de Joe Smith à la session A14 sont:
 	CoursGroupe: 420-D11, 2, A13, D3741, Smith, Joe, 2
 ]
 
+Ajout de la note 70 à Mario Tremblay pour le cours 420-D11: true
+Ajout de la note 80 à Jean Tremblay pour le cours 420-D11: true
+Ajout de la note 90 à Mario Séguin pour le cours 420-D11: true
+Ajout de la note 40 à Carl Marin pour le cours 420-D11: true
+
+Ajout de la note 80 à Mario Tremblay pour le cours 420-D12: true
+Ajout de la note 90 à Jean Tremblay pour le cours 420-D12: true
+Ajout de la note 70 à Mario Séguin pour le cours 420-D12: true
+
+Ajout de la note 80 à Mario Tremblay pour le cours 420-D61: true
+Ajout de la note 90 à Jean Tremblay pour le cours 420-D61: true
+Ajout de la note 60 à Mario Séguin pour le cours 420-D61: true
+Ajout de la note 70 à Carl Marin pour le cours 420-D11: true
+Ajout de la note 80 à Nathalie Allard pour le cours 420-D11: true
+Ajout de la note 90 à Julie Bédard pour le cours 420-D11: true
+Ajout de la note 95 à Tania Beaudoin pour le cours 420-D61: true
+
+Notes des étudiants du cours 420-D11, groupe 1, A13 sont:
+[
+	Etudiant: 1001, Tremblay, Mario => 70
+	Etudiant: 1002, Tremblay, Jean => 80
+]
+
+Moyenne du cours-groupe 420-D11, groupe 1, A13: 75
+
+Cours de Carl Marin:
+[
+	CoursGroupe: 420-D11, 2, A13, D3741, Smith, Joe, 2
+	CoursGroupe: 420-D11, 1, A14, D3737, Jones, Bob, 2
+]
+
+Cours de Mario Tremblay à la session A13:
+[
+	CoursGroupe: 420-D11, 1, A13, D3737, Jones, Bob, 2
+]
+
+Notes de Mario Tremblay à la session A13:
+[
+	Note: { 70 -- Etudiant: 1001, Tremblay, Mario -- CoursGroupe: 420-D11, 1, A13, D3737, Jones, Bob, 2 }
+]
+
+Moyenne de Mario Tremblay à la session A13:70
+
+Toutes les notes de Mario Tremblay:
+[
+	Note: { 70 -- Etudiant: 1001, Tremblay, Mario -- CoursGroupe: 420-D11, 1, A13, D3737, Jones, Bob, 2 }
+	Note: { 80 -- Etudiant: 1001, Tremblay, Mario -- CoursGroupe: 420-D12, 1, H14, D3737, Jones, Bob, 3 }
+	Note: { 80 -- Etudiant: 1001, Tremblay, Mario -- CoursGroupe: 420-D61, 1, A14, D3741, Smith, Joe, 3 }
+]
+
+Moyenne générale de Mario Tremblay: 76
+
+Corriger la note de Mario Tremblay cours-groupe 420-D11, groupe 1, A13:
+	70 => 90
+
+Moyenne de Mario Tremblay à la session A13: 90
+
+La moyenne du cours-groupe 420-D11, groupe 1, A13: 85

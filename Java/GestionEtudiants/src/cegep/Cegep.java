@@ -155,7 +155,7 @@ public class Cegep {
 	 */
 	public Cours getCours(String numero) {
 		for (Cours e : listeCours)
-			if (e.getNoCours() == numero)
+			if (e.getNoCours().equals(numero))
 				return e;
 		return null;
 	}
@@ -171,19 +171,6 @@ public class Cegep {
         CoursGroupe cg = new CoursGroupe(cours, noGroupe, session);
         listeCoursGroupe.add(cg);
         return cg;
-    }
-
-    /**
-     * Chercher un CoursGroupe par son numéro
-     * @param noGroupe le numéro du CoursGroupe
-     * @return l'instance du CoursGroupe correspondante au numéro sinon NULL
-     */
-    public CoursGroupe getCoursGroupe(int noGroupe) {
-        for (CoursGroupe cg: listeCoursGroupe) {
-            if (cg.getNoGroupe() == noGroupe)
-                return cg;
-        }
-        return null;
     }
 
     /**
