@@ -7,7 +7,7 @@
     <Priority>3</Priority>
     <Due>2016-10-06T00:00:00</Due>
     <Creation>2016-09-27T16:30:47.4942248-04:00</Creation>
-    <ClosedDate>2016-10-05T14:09:59.7413301-04:00</ClosedDate>
+    <ClosedDate>2016-10-06T11:51:19.9949076-04:00</ClosedDate>
     <Done>true</Done>
   </Tache>
   <Tache>
@@ -27,6 +27,16 @@
     <Priority>2</Priority>
     <Due>2016-10-03T00:00:00</Due>
     <Creation>2016-10-05T13:32:53.8876034-04:00</Creation>
+    <ClosedDate xsi:nil="true" />
+    <Done>false</Done>
+  </Tache>
+  <Tache>
+    <Id>5</Id>
+    <Description>12</Description>
+    <Client>12</Client>
+    <Priority>1</Priority>
+    <Due>2016-10-10T00:00:00</Due>
+    <Creation>2016-10-06T11:51:20.7581977-04:00</Creation>
     <ClosedDate xsi:nil="true" />
     <Done>false</Done>
   </Tache>

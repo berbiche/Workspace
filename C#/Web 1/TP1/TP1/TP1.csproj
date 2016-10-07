@@ -118,6 +118,7 @@
     </Compile>
     <Compile Include="Models\PersistentList.cs" />
     <Compile Include="Models\Tache.cs" />
+    <Compile Include="Models\VerifyDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

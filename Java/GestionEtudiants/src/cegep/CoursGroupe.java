@@ -6,6 +6,7 @@ public class CoursGroupe {
 	
 //	Variables privées
 	private Cours cours;
+    private int moyenne;
 	private int noGroupe;
 	private String session, noLocal;
 	private Professeur professeur;
@@ -23,16 +24,25 @@ public class CoursGroupe {
 		return professeur;
 	}
 	public void setProfesseur(Professeur professeur) {
+        if (this.professeur != null)
+            this.professeur.retirerCours(this);
 		this.professeur = professeur;
+        professeur.ajouterCours(this);
 	}
 	public Cours getCours() {
 		return cours;
 	}
+	public int getMoyenne() {
+        return moyenne;
+    }
 	public int getNoGroupe() {
 		return noGroupe;
 	}
 	public String getSession() {
 		return session;
+	}
+	public ArrayList<Etudiant> getListeEtudiant() {
+        return listeEtudiant;
 	}
 	
 	/**
@@ -54,6 +64,7 @@ public class CoursGroupe {
      */
 	public void inscrireEtudiant(Etudiant etudiant) {
         listeEtudiant.add(etudiant);
+        etudiant.ajouterCours(this);
     }
 
     /**
@@ -76,8 +87,10 @@ public class CoursGroupe {
      */
     public boolean retirerEtudiant(String noDossier) {
         for (int i = 0; i < listeEtudiant.size(); i++) {
-            if (listeEtudiant.get(i).getNoDossier().equals(noDossier)) {
+            Etudiant e = listeEtudiant.get(i);
+            if (e.getNoDossier().equals(noDossier)) {
                 listeEtudiant.remove(i);
+                e.retirerCours(this);
                 return true;
             }
         }
@@ -90,6 +103,7 @@ public class CoursGroupe {
      * @return le succès de l'opération
      */
     public boolean retirerEtudiant(Etudiant etudiant) {
+        etudiant.retirerCours(this);
         return listeEtudiant.remove(etudiant);
     }
 
@@ -120,14 +134,44 @@ public class CoursGroupe {
     }
 
     /**
+     * Retourne la note d'un étudiant
+     * @param nom le nom de famille de l'étudiant
+     * @param prenom le prénom de l'étudiant
+     * @return -1 si étudiant non trouvé
+     */
+    public int getNoteEtudiant(String nom, String prenom) {
+        for (Note n: notes) {
+            if (n.getEtudiant().getNomFamille().equals(nom) && n.getEtudiant().getPrenom().equals(prenom))
+                return n.getResultat();
+        }
+        return -1;
+    }
+
+    boolean ajouterNote(Note n) {
+        return notes.add(n);
+    }
+
+    /**
      * Ajouter une note à un étudiant
      * @param etudiant instance de l'objet Etudiant
      * @param resultat le résultat de l'étudiant
      */
-    public void ajouterNote(Etudiant etudiant, int resultat) {
-        Note n = new Note(etudiant, this, resultat);
-        notes.add(n);
-        etudiant.ajouterNote(n);
+    public boolean ajouterNote(Etudiant etudiant, int resultat) {
+        if (listeEtudiant.contains(etudiant)) {
+            Note n = new Note(etudiant, this, resultat);
+            notes.add(n);
+            etudiant.ajouterNote(n);
+            moyenne += ((resultat - moyenne) / notes.size());
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return "CoursGroupe: " + cours.getNoCours() + ", " + noGroupe + ", "
+                + session + ", " + noLocal + ", " + professeur.getNomFamille()
+                + ", " + professeur.getPrenom() + ", " + listeEtudiant.size();
     }
 
 }

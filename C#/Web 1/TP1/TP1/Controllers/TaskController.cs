@@ -47,7 +47,7 @@ namespace TP1.Controllers
                     depot.SaveChanges();
                     return RedirectToAction("Index");
                 }
-                return View(Erreur);
+                return View(new Tache());
             }
             catch
             {

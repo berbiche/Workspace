@@ -17,7 +17,7 @@ public class Cegep {
 		listeCours = new ArrayList<Cours>();
 		listeBenevoles = new ArrayList<Personne>();
         listeCoursGroupe = new ArrayList<CoursGroupe>();
-        numDossierEtudiant = 0;
+        numDossierEtudiant = 1001;
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class Cegep {
 	/**
 	 * Rechercher un étudiant par son numéro de dossier
 	 * @param noDossier Le numéro de dossier de l'étudiant
-	 * @return null si aucun étudiant posséde ce numéro de dossier sinon Etudiant
+	 * @return null si aucun étudiant possède ce numéro de dossier sinon Etudiant
 	 */
 	public Etudiant getEtudiant(String noDossier) {
 		for (Etudiant e: listeEtudiant) {
@@ -55,6 +55,20 @@ public class Cegep {
 		}
 		return null;
 	}
+
+    /**
+     * Rechercher un étudiant par son nom de famille et son prénom
+     * @param nomFamille le nom de famille de l'étudiant
+     * @param prenom le prénom de l'étudiant
+     * @return null si aucun étudiant possède ce numéro de dossier sinon Etudiant
+     */
+	public Etudiant getEtudiant(String nomFamille, String prenom) {
+        for (Etudiant e: listeEtudiant) {
+            if (e.getNomFamille().equals(nomFamille) && e.getPrenom().equals(prenom))
+                return e;
+        }
+        return null;
+    }
 
 	/**
 	 * Rechercher tous les étudiants avec un nom de famille donné
@@ -83,6 +97,11 @@ public class Cegep {
 		return e;
 	}
 
+    /**
+     * Rechercher un professeur par son NAS
+     * @param NAS le NAS du professeur
+     * @return null si aucun professeur possède ce NAS
+     */
 	public Professeur getProfesseur(String NAS) {
         for (Professeur p: listeProfesseur) {
             if (p.getNAS().equals(NAS))
@@ -90,7 +109,21 @@ public class Cegep {
         }
         return null;
     }
-	
+
+    /**
+     * Rechercher un professeur par son nom de famille et son prénom
+     * @param nomFamille le nom de famille du professeur
+     * @param prenom le prénom du professeur
+     * @return null si aucun professeur possède ce nom de famille et prénom
+     */
+    public Professeur getProfesseur(String nomFamille, String prenom) {
+        for (Professeur p: listeProfesseur) {
+            if (p.getNomFamille().equals(nomFamille) && p.getPrenom().equals(prenom))
+                return p;
+        }
+        return null;
+    }
+
 	/**
 	 * Ajouter un cours dans la liste de cours
 	 * @param numero Le numéro du cours
@@ -153,8 +186,22 @@ public class Cegep {
         return null;
     }
 
+    /**
+     * Chercher un CoursGroupe par son nom, numéro de groupe et la session
+     * @param numero
+     * @param noGroupe
+     * @param session
+     * @return
+     */
     public CoursGroupe getCoursGroupe(String numero, int noGroupe, String session) {
-        return getCoursGroupe(noGroupe);
+		for (CoursGroupe cg: listeCoursGroupe) {
+            if (cg.getNoGroupe() == noGroupe
+                && cg.getCours().getNoCours().equals(numero)
+                && cg.getSession().equals(session)) {
+                return cg;
+            }
+        }
+        return null;
     }
 	
 	/**
@@ -170,7 +217,7 @@ public class Cegep {
 	 * @param nomFamille le nom de famille de la personne
 	 * @return la liste de personnes avec le nom de famille
 	 */
-	public ArrayList<Personne> rechercheBenevole(String nomFamille) {
+	public ArrayList<Personne> rechercherBenevole(String nomFamille) {
 		ArrayList<Personne> trouve = new ArrayList<Personne>();
 		for (Personne e : listeBenevoles) {
 			if (e.nomFamille.equals(nomFamille))

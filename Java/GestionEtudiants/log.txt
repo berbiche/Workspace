@@ -1,0 +1,70 @@
+CoursGroupe: 420-D11, 1, A13, D3737, Jones, Bob, 2
+
+Les étudiants du cours-groupe 420-D11, groupe 1, A13 sont:
+[
+	Etudiant: 1002, Tremblay, Jean
+	Etudiant: 1001, Tremblay, Mario
+]
+
+La moyenne du groupe est: 75
+
+La moyenne de Mario Tremblay est de: -1
+
+CoursGroupe: 420-D11, 2, A13, D3741, Smith, Joe, 2
+
+Les étudiants du cours-groupe 420-D11, groupe 2, A13 sont:
+[
+	Etudiant: 1003, Séguin, Mario
+	Etudiant: 1004, Marin, Carl
+]
+
+CoursGroupe: 420-D12, 1, H14, D3737, Jones, Bob, 3
+
+Les étudiants du cours-groupe 420-D12, groupe 1, H14 sont:
+[
+	Etudiant: 1001, Tremblay, Mario
+	Etudiant: 1002, Tremblay, Jean
+	Etudiant: 1003, Séguin, Mario
+]
+
+CoursGroupe: 420-D61, 1, A14, D3741, Smith, Joe, 3
+
+Les étudiants du cours-groupe 420-D61, groupe 1, A14 sont:
+[
+	Etudiant: 1001, Tremblay, Mario
+	Etudiant: 1002, Tremblay, Jean
+	Etudiant: 1003, Séguin, Mario
+]
+
+CoursGroupe: 420-D11, 1, A14, D3737, Jones, Bob, 2
+
+Les étudiants du cours-groupe 420-D11, groupe 1, A14 sont:
+[
+	Etudiant: 1004, Marin, Carl
+	Etudiant: 1005, Allard, Nathalie
+]
+
+CoursGroupe: 420-D11, 2, A14, D3741, Jones, Bob, 2
+
+Les étudiants du cours-groupe 420-D11, groupe 2, A14 sont:
+[
+	Etudiant: 1006, Bédard, Julie
+	Etudiant: 1007, Beaudoin, Tania
+]
+
+Les cours de Bob Jones à la session A13 sont:
+[
+	CoursGroupe: 420-D11, 1, A13, D3737, Jones, Bob, 2
+]
+
+Les cours de Bob Jones à la session A14 sont:
+[
+	CoursGroupe: 420-D11, 1, A14, D3737, Jones, Bob, 2
+	CoursGroupe: 420-D11, 2, A14, D3741, Jones, Bob, 2
+]
+
+Les cours de Joe Smith à la session A14 sont:
+[
+	CoursGroupe: 420-D11, 2, A13, D3741, Smith, Joe, 2
+]
+
