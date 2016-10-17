@@ -1,9 +1,6 @@
 package principal;
 
 import cegep.*;
-import org.apache.commons.codec.language.Soundex;
-
-import static org.junit.Assert.*;
 
 public class Principal {
     public static void main(String[] args) {
