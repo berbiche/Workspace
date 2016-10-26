@@ -9,119 +9,77 @@ namespace TP1.Controllers
 {
     public class TaskController : Controller
     {
-        private PersistentList<Tache> depot = new PersistentList<Tache>();
         private const string Erreur = "~/Views/Shared/Error.cshtml";
 
         // GET: Task
         public ActionResult Index()
         {
-            return View(depot);
+            return View(Task.GetList());
         }
 
         // GET: Task/Details/5
         public ActionResult Details(int id)
         {
-            Tache toDetails = depot.Find(p => p.Id == id);
-            return View(toDetails);
+            return View(Task.FindOne(id));
         }
 
-        // GET: Default/Create
+        // GET: Task/Create
         public ActionResult Create()
         {
-            Tache emptyTache = new Tache();
+            Task emptyTache = new Task();
             return View(emptyTache);
         }
 
-        // POST: Default/Create
+        // POST: Task/Create
         [HttpPost]
-        public ActionResult Create(Tache newTache)
+        public ActionResult Create(Task newTask)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    newTache.Creation = DateTime.Now;
-                    if (newTache.Creation.CompareTo(newTache.Due) == 1)
-                        return View(Erreur);
-                    depot.Add(newTache);
-                    depot.SaveChanges();
+            if (ModelState.IsValid)
+                if (newTask.SaveAsNew())
                     return RedirectToAction("Index");
-                }
-                return View(new Tache());
-            }
-            catch
-            {
-                return View(Erreur);
-            }
+            return View(Erreur);
         }
 
-        // GET: Default/Edit/5
+        // GET: Task/Edit/5
         public ActionResult Edit(int id)
         {
-            Tache toEdit = depot.Find(x => x.Id == id);
-            return View(toEdit);
+            return View(Task.FindOne(id));
         }
 
-        // POST: Default/Edit/5
+        // POST: Task/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, Tache newTache)
+        public ActionResult Edit(int id, Task task)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    Tache oldTache = depot.Find(p => p.Id == id);
-                    int index = depot.IndexOf(oldTache);
-                    newTache.Creation = oldTache.Creation;
-                    depot[index] = newTache;
-                    depot.SaveChanges();
+            if (ModelState.IsValid)
+                if (task.Update())
                     return RedirectToAction("Index");
-                }
-                return View(Erreur);
-            }
-            catch
-            {
-                return View(Erreur);
-            }
+            return View(Erreur);
         }
 
-        // GET: Default/Delete/5
+        // GET: Task/Delete/5
         public ActionResult Delete(int id)
         {
-            Tache toDeleteTache = depot.Find(p => p.Id == id);
-            return View(toDeleteTache);
+            return View(Task.FindOne(id));
         }
 
-        // POST: Default/Delete/5
+        // POST: Task/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, Tache t)
+        public ActionResult Delete(int id, Task t)
         {
-            try
-            {
-                // TODO: Add delete logic here
-                depot.RemoveAll(p => p.Id == id);
-                depot.SaveChanges();
+            if (Task.Destroy(id))
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(Erreur);
-            }
+            return View(Erreur);
         }
 
+        // POST: Task/Terminate/5
         [HttpPost]
         public ActionResult Terminate(int id)
         {
-            try
-            {
-                depot.Find(p => p.Id == id).Done = true;
-                depot.SaveChanges();
+            Task asd = Task.FindOne(id);
+            asd.Done = true;
+            if (asd.Update())
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(Erreur);
-            }
+            return View(Erreur);
         }
     }
 }

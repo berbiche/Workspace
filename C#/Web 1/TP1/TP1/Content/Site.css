@@ -58,6 +58,18 @@ footer {
     text-align: center;
 }
 
+form {
+    margin-bottom: 0;
+}
+
+button[type="submit"] {
+    margin-left: 10px;
+}
+
+.inline {
+    display: inline;
+}
+
 /*Section pour l'affichage des tableaux
 table {
     width: 100%;

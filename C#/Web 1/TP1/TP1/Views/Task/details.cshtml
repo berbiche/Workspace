@@ -1,4 +1,4 @@
-﻿@model TP1.Models.Tache
+﻿@model TP1.Models.Task
 @{
     ViewBag.Title = "details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -59,6 +59,6 @@
     </table>
 </div>
 <p>
-    @Html.ActionLink("Éditer", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Retour à la liste de tâche", "Index")
+    @Html.ActionLink("Retour à la liste de tâche", "Index", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Éditer", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
 </p>
