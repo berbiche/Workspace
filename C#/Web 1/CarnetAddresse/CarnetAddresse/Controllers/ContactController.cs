@@ -9,24 +9,23 @@ namespace CarnetAddresse.Controllers
 {
     public class ContactController : Controller
     {
-        PersistentList<Contact> depot = new PersistentList<Contact>();
 
         // GET: Contact
         public ActionResult Index(string q = null)
         {
             if (q != null)
             {
+                
 				ViewBag.q = true;
-                return View(depot.FindAll(p => p.Nom.Equals(q)));
+                return View(Contact.FindName(q));
             }
-            return View(depot);
+            return View(Contact.GetList());
         }
 
         // GET: Contact/Details/5
         public ActionResult Details(int id)
         {
-            Contact toEdit = depot.Find(p => p.id == id);
-            return View(toEdit);
+            return View(Contact.FindOne(id));
         }
 
         // GET: Contact/Create
@@ -47,11 +46,11 @@ namespace CarnetAddresse.Controllers
                 // On sauvegarde la liste ainsi modifiée
                 depot.SaveChanges();
                 // On affiche un message
-                return Content("Le contact a été ajouté<br><a href=\"/Contact\">Back to List</a>");
+                return Content("Le contact a été ajouté<br><a href=\"/Contact\" class=\"btn btn-primary\">Back to List</a>");
             }
             catch
             {
-                return Content("Une erreur s'est produite!<br><a href=\"/Contact\">Back to List</a>");
+                return Content("Une erreur s'est produite!<br><a href=\"/Contact\" class=\"btn btn-primary\">Back to List</a>");
             }
         }
 
@@ -59,7 +58,7 @@ namespace CarnetAddresse.Controllers
         public ActionResult Edit(int id)
         {
             // On va chercher dans le dépôt le contact à modifier
-            Contact toEdit = depot.Find(p => p.id == id);
+            Contact toEdit = depot.Find(p => p.Id == id);
             // Appel à la vue avec le contact comme paramètre
             return View(toEdit);
         }
@@ -71,7 +70,7 @@ namespace CarnetAddresse.Controllers
             try
             {
                 // On cherche le contact à modifier et on le remplace
-                Contact oldContact = depot.Find(p => p.id == id);
+                Contact oldContact = depot.Find(p => p.Id == id);
                 int index = depot.IndexOf(oldContact);
                 depot[index] = newContact;
                 // Enregistrement en bonne et due forme!
@@ -85,22 +84,23 @@ namespace CarnetAddresse.Controllers
         }
 
         // GET: Contact/Delete/5
+        [HttpGet]
         public ActionResult Delete(int id)
         {
             // On va chercher dans le dépôt le contact à supprimer
-            Contact toDelete = depot.Find(p => p.id == id);
+            Contact toDelete = depot.Find(p => p.Id == id);
             // On retourne une vue et on associe le contact à la vue!
             return View(toDelete);
         }
 
         // POST: Contact/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, Contact c) //second parameter inutile ici
+        public ActionResult Delete(int id, dynamic a)
         {
             try
             {
                 // On supprime de la liste
-                depot.RemoveAll(p => p.id == id);
+                depot.RemoveAll(p => p.Id == id);
                 // On sauvegarde la liste
                 depot.SaveChanges();
                 return RedirectToAction("Index");

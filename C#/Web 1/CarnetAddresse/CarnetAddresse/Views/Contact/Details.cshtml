@@ -1,10 +1,11 @@
 ﻿@model CarnetAddresse.Models.Contact
 
 @{
-	ViewBag.Title = "Details";
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<link href="~/Content/Site.css" rel="stylesheet" />
-<h2>Details</h2>
+
+<h2>Détails</h2>
 
 <div>
 	<h4>Contact</h4>
@@ -12,27 +13,27 @@
 	<table class="table">
 		<tr>
 			<th>
-				@Html.Label("Id", "Id")
+				@Html.LabelFor(model => model.Id)
 			</th>
 			<th>
-				@Html.Label("Nom", "Nom")
+				@Html.LabelFor(model => model.Nom)
 			</th>
 			<th>
-				@Html.Label("Telephone", "Téléphone")
+				@Html.LabelFor(model => model.Telephone)
 			</th>
 			<th>
-				@Html.Label("Courriel", "Courriel")
+				@Html.LabelFor(model => model.Courriel)
 			</th>
 			<th>
-				@Html.Label("DateNaissance", "Date de naissance")
+				@Html.LabelFor(model => model.DateNaissance)
 			</th>
 			<th>
-				@Html.Label("CodePostal", "Code postal")
+				@Html.LabelFor(model => model.CodePostal)
 			</th>
 		</tr>
 		<tr>
 			<td>
-				@Html.DisplayFor(model=> model.id)
+				@Html.DisplayFor(model=> model.Id)
 			</td>
 			<td>
 				@Html.DisplayFor(model => model.Nom)
@@ -55,6 +56,6 @@
 
 </div>
 <p>
-	@Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+	@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
 	@Html.ActionLink("Back to List", "Index")
 </p>
