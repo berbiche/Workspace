@@ -39,76 +39,42 @@ namespace CarnetAddresse.Controllers
         [HttpPost]
         public ActionResult Create(Contact newContact)
         {
-            try
-            {
-                // On ajoute le nouveau contact en mémoire (i.e. dans la liste)
-                depot.Add(newContact);
-                // On sauvegarde la liste ainsi modifiée
-                depot.SaveChanges();
-                // On affiche un message
-                return Content("Le contact a été ajouté<br><a href=\"/Contact\" class=\"btn btn-primary\">Back to List</a>");
-            }
-            catch
-            {
-                return Content("Une erreur s'est produite!<br><a href=\"/Contact\" class=\"btn btn-primary\">Back to List</a>");
-            }
+            if (ModelState.IsValid)
+                if (newContact.SaveAsNew())
+                    return RedirectToAction("Index");
+            return Content("Erreur");
         }
 
         // GET: Contact/Edit/5
         public ActionResult Edit(int id)
         {
-            // On va chercher dans le dépôt le contact à modifier
-            Contact toEdit = depot.Find(p => p.Id == id);
-            // Appel à la vue avec le contact comme paramètre
-            return View(toEdit);
+            return View(Contact.FindOne(id));
         }
 
         // POST: Contact/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, Contact newContact)
         {
-            try
-            {
-                // On cherche le contact à modifier et on le remplace
-                Contact oldContact = depot.Find(p => p.Id == id);
-                int index = depot.IndexOf(oldContact);
-                depot[index] = newContact;
-                // Enregistrement en bonne et due forme!
-                depot.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return Content("Erreur");
-            }
+            if (ModelState.IsValid)
+                if (newContact.Update())
+                    return RedirectToAction("Index");
+            return Content("Erreur");
         }
 
         // GET: Contact/Delete/5
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            // On va chercher dans le dépôt le contact à supprimer
-            Contact toDelete = depot.Find(p => p.Id == id);
-            // On retourne une vue et on associe le contact à la vue!
-            return View(toDelete);
+            return View(Contact.FindOne(id));
         }
 
         // POST: Contact/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, dynamic a)
         {
-            try
-            {
-                // On supprime de la liste
-                depot.RemoveAll(p => p.Id == id);
-                // On sauvegarde la liste
-                depot.SaveChanges();
+            if (Contact.Destroy(id))
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return Content("Erreur");
-            }
+            return Content("Erreur");
         }
     }
 }
