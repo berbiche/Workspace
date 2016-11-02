@@ -6,21 +6,12 @@ import db.Produit;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 import javax.swing.table.TableModel;
-import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.InputEvent;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
+import java.awt.*;
 import java.math.BigDecimal;
 import java.sql.SQLException;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Vector;
 
 /**
  * Created by Nicolas on 2016-10-31.
@@ -50,6 +41,10 @@ public class Lab4Frame extends JFrame {
     public static void main(String[] args) {
         try {
             DBManager.initialize();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage()+"\n"+e.getCause()+"\n"+e.getErrorCode());
+            JOptionPane.showMessageDialog(null, "Adapter la variable CHAINE_CONNECTION pour votre DB");
+            System.exit(1);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getStackTrace());
             System.exit(1);
@@ -69,27 +64,36 @@ public class Lab4Frame extends JFrame {
 
         btnAddCategorie.addActionListener(e -> {
             try {
-                int tmp = Integer.parseInt(txtNoCategorie.getText());
+                int tmp = parseInt(txtNoCategorie.getText());
+
                 DBManager.insertCategorie(new Categorie(tmp, txtNomCategorie.getText()));
-                DefaultTableModel model = (DefaultTableModel)tableCategorie.getModel();
-                model.addRow(new Object[] {tmp, txtNomCategorie.getText()});
-                model.fireTableDataChanged();
+
+                DefaultTableModel model = (DefaultTableModel) tableCategorie.getModel();
+                tableProduit.getSelectionModel().clearSelection();
+                model.addRow(new Object[] {tmp, txtNomCategorie.getText()}); //Ajouter à la table
+
+                //Pour redessiner la table
+                model.fireTableRowsInserted(0, model.getRowCount() - 1);
+
+                //Vider les textfields
                 txtNoCategorie.setText(null);
                 txtNomCategorie.setText(null);
+
             } catch (SQLException f) {
-                JOptionPane.showMessageDialog(null, f.getStackTrace());
-            } catch (Exception g) {
-                JOptionPane.showMessageDialog(null, "Données invalides");
+                JOptionPane.showMessageDialog(null, f.getMessage());
+            } catch (Exception f) {
+                JOptionPane.showMessageDialog(null, f.getMessage());
             }
         });
 
         btnAddProduit.addActionListener(e -> {
             try {
-                int numCat = Integer.parseInt(txtNumeroCategorie.getText());
-                int noFournisseur = Integer.parseInt(txtNumeroFournisseur.getText());
-                int uniteCo = Integer.parseInt(txtUniteCommande.getText());
-                int uniteStock = Integer.parseInt(txtUniteStock.getText());
+                int numCat = parseInt(txtNumeroCategorie.getText());
+                int noFournisseur = parseInt(txtNumeroFournisseur.getText());
+                int uniteCo = parseInt(txtUniteCommande.getText());
+                int uniteStock = parseInt(txtUniteStock.getText());
                 BigDecimal prix = new BigDecimal(txtPrixUnitaire.getText());
+
                 int id = DBManager.insertProduit(new Produit(
                         0,
                         txtNomProduit.getText(),
@@ -99,17 +103,15 @@ public class Lab4Frame extends JFrame {
                         uniteCo,
                         uniteStock
                 ));
-                DefaultTableModel model = (DefaultTableModel)tableProduit.getModel();
-                model.addRow(new Object[] {
-                        id,
-                        txtNomProduit.getText(),
-                        numCat,
-                        noFournisseur,
-                        prix,
-                        uniteCo,
-                        uniteStock
-                });
-                model.fireTableDataChanged();
+
+                tableProduit.getSelectionModel().clearSelection();
+
+                DefaultTableModel model = (DefaultTableModel) tableProduit.getModel();
+
+                model.addRow(new Object[] {id, txtNomProduit.getText(), numCat, noFournisseur, prix, uniteCo, uniteStock});
+
+                model.fireTableRowsInserted(0, model.getRowCount() - 1);
+
                 txtNumeroFournisseur.setText(null);
                 txtUniteCommande.setText(null);
                 txtUniteStock.setText(null);
@@ -117,21 +119,68 @@ public class Lab4Frame extends JFrame {
                 txtNumeroCategorie.setText(null);
                 txtPrixUnitaire.setText(null);
             } catch (SQLException f) {
+                JOptionPane.showMessageDialog(null, f.getMessage());
+            } catch (Exception f) {
                 JOptionPane.showMessageDialog(null, f.getStackTrace());
-            } catch (Exception g) {
-                JOptionPane.showMessageDialog(null, "Données invalides");
             }
         });
 
         loadTables();
 
-        TableModel model = (TableModel) tableCategorie.getModel();
+        TableModel model = tableCategorie.getModel();
         model.addTableModelListener(e -> {
-            TableModel mm = (TableModel) e.getSource();
-            Object no_categorie  = mm.getValueAt(e.getFirstRow(), 0),
-                   nom_categorie = mm.getValueAt(e.getFirstRow(), 1);
-            categories.get(e.getFirstRow());
-            System.out.println();
+            if (e.getType() == TableModelEvent.UPDATE) {
+                TableModel mm = (TableModel) e.getSource();
+                try {
+                    Categorie categorie = categories.get(e.getFirstRow());
+
+                    int no_categorie = parseInt(mm.getValueAt(e.getFirstRow(), 0));
+                    String nom_categorie = (String) mm.getValueAt(e.getFirstRow(), 1);
+
+                    DBManager.updateCategorie(categorie.getNo_categorie(), new Categorie(no_categorie, nom_categorie));
+
+                    categorie.setNo_categorie(no_categorie);
+                    categorie.setNom_categorie(nom_categorie);
+
+                } catch (SQLException f) {
+                    JOptionPane.showMessageDialog(null, f.getMessage());
+                } catch (ClassCastException f) {
+                    JOptionPane.showMessageDialog(null, f.getMessage());
+                }
+            }
+        });
+
+        model = tableProduit.getModel();
+        model.addTableModelListener(e -> {
+            if (e.getType() == TableModelEvent.UPDATE) {
+                TableModel mm = (TableModel) e.getSource();
+                try {
+                    Produit produit = produits.get(e.getFirstRow());
+
+                    String nom_produit = (String) mm.getValueAt(e.getFirstRow(), 1);
+                    BigDecimal prix_unitaire = (BigDecimal) mm.getValueAt(e.getFirstRow(), 4);
+                    int no_categorie = parseInt(mm.getValueAt(e.getFirstRow(), 2)),
+                            no_fournisseur = (int) mm.getValueAt(e.getFirstRow(), 3),
+                            unites_commandees = (int) mm.getValueAt(e.getFirstRow(), 5),
+                            unites_en_stock = (int) mm.getValueAt(e.getFirstRow(), 6);
+
+                    DBManager.updateProduit(new Produit(produit.getNo_produit(), nom_produit, no_categorie,
+                            no_fournisseur, prix_unitaire, unites_commandees, unites_en_stock
+                    ));
+
+                    produit.setNom_produit(nom_produit);
+                    produit.setNo_categorie(no_categorie);
+                    produit.setNo_fournisseur(no_fournisseur);
+                    produit.setPrix_unitaire(prix_unitaire);
+                    produit.setUnites_commandees(unites_commandees);
+                    produit.setUnites_en_stock(unites_en_stock);
+
+                } catch (SQLException f) {
+                    JOptionPane.showMessageDialog(null, f.getMessage());
+                } catch (ClassCastException f) {
+                    JOptionPane.showMessageDialog(null, f.getStackTrace());
+                }
+            }
         });
     }
 
@@ -178,6 +227,10 @@ public class Lab4Frame extends JFrame {
             row[6] = p.getUnites_en_stock();
             model.addRow(row);
         }
+    }
+
+    private static int parseInt(Object o) {
+        return Integer.parseInt((String) o);
     }
 }
 
