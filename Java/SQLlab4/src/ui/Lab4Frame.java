@@ -5,8 +5,11 @@ import db.DBManager;
 import db.Produit;
 
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
+import javax.swing.table.TableModel;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +19,8 @@ import java.beans.PropertyChangeListener;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Created by Nicolas on 2016-10-31.
@@ -35,6 +40,8 @@ public class Lab4Frame extends JFrame {
     private JTextField txtUniteCommande;
     private JTextField txtUniteStock;
     private JTextField txtNoCategorie;
+    private ArrayList<Categorie> categories;
+    private ArrayList<Produit> produits;
 
     public Lab4Frame() {
         initUI();
@@ -116,27 +123,34 @@ public class Lab4Frame extends JFrame {
             }
         });
 
-        tableCategorie.addPropertyChangeListener(e -> {
-
-        });
-
         loadTables();
+
+        TableModel model = (TableModel) tableCategorie.getModel();
+        model.addTableModelListener(e -> {
+            TableModel mm = (TableModel) e.getSource();
+            Object no_categorie  = mm.getValueAt(e.getFirstRow(), 0),
+                   nom_categorie = mm.getValueAt(e.getFirstRow(), 1);
+            categories.get(e.getFirstRow());
+            System.out.println();
+        });
     }
 
     private void loadTables() {
         //Charger la table des catégories
         DefaultTableModel model = new DefaultTableModel(0, 2);
+
         model.setColumnIdentifiers(new String[] {"no_categorie", "nom_categorie"});
         tableCategorie.setModel(model);
         Object row[] = new Object[2];
-        for (Categorie c: DBManager.getTableCategorie()) {
+        categories = DBManager.getTableCategorie();
+        for (Categorie c: categories) {
             row[0] = c.getNo_categorie();
             row[1] = c.getNom_categorie();
             model.addRow(row);
         }
 
         //Charger la table des produits
-        String[] produits = new String[] {
+        String[] headersProduits = new String[] {
             "no_produit",
             "nom_produit",
             "no_categorie",
@@ -145,7 +159,7 @@ public class Lab4Frame extends JFrame {
             "unites_commandees",
             "unites_en_stock"
         };
-        model = new DefaultTableModel(produits, 0) {
+        model = new DefaultTableModel(headersProduits, 0) {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return column != 0;
@@ -153,7 +167,8 @@ public class Lab4Frame extends JFrame {
         };
         tableProduit.setModel(model);
         row = new Object[7];
-        for (Produit p: DBManager.getTableProduit()) {
+        produits = DBManager.getTableProduit();
+        for (Produit p: produits) {
             row[0] = p.getNo_produit();
             row[1] = p.getNom_produit();
             row[2] = p.getNo_categorie();
@@ -165,3 +180,4 @@ public class Lab4Frame extends JFrame {
         }
     }
 }
+

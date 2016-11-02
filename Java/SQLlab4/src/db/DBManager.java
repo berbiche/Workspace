@@ -12,7 +12,7 @@ public final class DBManager {
                                                         + "(no_produit integer identity(1,1) Primary Key, nom_produit "
                                                         + "varchar(40), no_categorie integer Foreign Key references Categories(no_categorie)"
                                                         + "ON UPDATE CASCADE ON DELETE SET NULL,"
-                                                        + "no_fournisseur integer not null, prix_unitaire money, unites_commandees integer,"
+                                                        + "no_fournisseur integer, prix_unitaire money, unites_commandees integer,"
                                                         + "unites_en_stock integer)",
                                 INSERT_TABLE_CATEGORIES = "INSERT INTO Categories(no_categorie, nom_categorie) VALUES (?,?)",
                                 INSERT_TABLE_PRODUITS   = "INSERT INTO Produits(nom_produit, no_categorie, no_fournisseur,"
