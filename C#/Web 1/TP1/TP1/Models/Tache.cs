@@ -66,10 +66,10 @@ namespace TP1.Models
             }
         }
 
-        public static List<Task> GetList()
+        public static List<Task> GetList(string user)
         {
             string cStr = ConfigurationManager.ConnectionStrings["TaskManager"].ConnectionString;
-            string requete = "SELECT * FROM Task";
+            string requete = "SELECT * FROM Task WHERE Client = @Client";
 
             using (SqlConnection cnx = new SqlConnection(cStr))
             {
@@ -77,6 +77,8 @@ namespace TP1.Models
                 {
                     cnx.Open();
                     cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.Add("Client", SqlDbType.Int);
+                    cmd.Parameters["Client"].SqlValue = int.Parse(user);
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {
                         List<Task> taskList = new List<Task>();
@@ -102,10 +104,10 @@ namespace TP1.Models
             }
         }
 
-        public static bool Destroy(int id)
+        public static bool Destroy(string user, int id)
         {
             string cN = ConfigurationManager.ConnectionStrings["TaskManager"].ConnectionString;
-            string requete = "DELETE FROM Task WHERE Id = " + id;
+            string requete = "DELETE FROM Task WHERE Id = " + id + " AND Client = @client";
 
             using (SqlConnection cnx = new SqlConnection(cN))
             {
@@ -120,17 +122,19 @@ namespace TP1.Models
             }
         }
 
-        public static Task FindOne(int id)
+        public static Task FindOne(string user, int id)
         {
             string cStr = ConfigurationManager.ConnectionStrings["TaskManager"].ConnectionString;
 
             using (SqlConnection cnx = new SqlConnection(cStr))
             {
-                string requete = "SELECT * FROM Task WHERE id = " + id;
+                string requete = "SELECT * FROM Task WHERE id = " + id + " AND Client = @client";
 
                 using (SqlCommand cmd = new SqlCommand(requete, cnx))
                 {
                     cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.Parameters.Add("Client", SqlDbType.Int);
+                    cmd.Parameters["Client"].SqlValue = int.Parse(user);
                     cnx.Open();
                     using (SqlDataReader dataReader = cmd.ExecuteReader())
                     {

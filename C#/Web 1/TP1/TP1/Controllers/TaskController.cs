@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
+using Microsoft.AspNet.Identity;
 using TP1.Models;
 
 namespace TP1.Controllers
@@ -11,26 +13,26 @@ namespace TP1.Controllers
     {
         private const string Erreur = "~/Views/Shared/Error.cshtml";
 
-        // GET: Task
+        [Authorize]
         public ActionResult Index()
         {
-            return View(Task.GetList());
+            return View(Task.GetList(User.Identity.Name));
         }
 
-        // GET: Task/Details/5
+        [Authorize]
         public ActionResult Details(int id)
         {
             return View(Task.FindOne(id));
         }
 
-        // GET: Task/Create
+        [Authorize]
         public ActionResult Create()
         {
             Task emptyTache = new Task();
             return View(emptyTache);
         }
 
-        // POST: Task/Create
+        [Authorize]
         [HttpPost]
         public ActionResult Create(Task newTask)
         {
@@ -40,13 +42,13 @@ namespace TP1.Controllers
             return View(Erreur);
         }
 
-        // GET: Task/Edit/5
+        [Authorize]
         public ActionResult Edit(int id)
         {
-            return View(Task.FindOne(id));
+            return View(Task.FindOne(, id));
         }
 
-        // POST: Task/Edit/5
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(int id, Task task)
         {
@@ -56,13 +58,13 @@ namespace TP1.Controllers
             return View(Erreur);
         }
 
-        // GET: Task/Delete/5
+        [Authorize]
         public ActionResult Delete(int id)
         {
             return View(Task.FindOne(id));
         }
 
-        // POST: Task/Delete/5
+        [Authorize]
         [HttpPost]
         public ActionResult Delete(int id, Task t)
         {
@@ -71,7 +73,7 @@ namespace TP1.Controllers
             return View(Erreur);
         }
 
-        // POST: Task/Terminate/5
+        [Authorize]
         [HttpPost]
         public ActionResult Terminate(int id)
         {

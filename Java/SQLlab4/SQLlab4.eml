@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="intellij_forms_rt.jar" scope="PROVIDED">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/library/intellij_forms_rt.jar!/"/>
+	</lib>
+	<lib name="sqljdbc4.jar" scope="PROVIDED">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/library/sqljdbc4.jar!/"/>
+	</lib>
+</component>

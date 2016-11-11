@@ -16,14 +16,11 @@ ALTER TABLE Commande
 ALTER COLUMN No_commande INTEGER NOT NULL
 GO
 
-ALTER TABLE Commande
+ALTER TABLE Commande NO CHECK
 ADD	FOREIGN KEY (No_client) REFERENCES Clients(No_client) ON UPDATE CASCADE ON DELETE CASCADE
 	PRIMARY KEY (No_commande)
 GO
 */
-
-SELECT * FROM Commande
-SELECT * FROM Clients
 
 --Q01
 SELECT cl.Ville, SUM(co.Montant) 'Montant total des commandes'
@@ -50,9 +47,10 @@ ON cl.No_client = co.No_client
 GROUP BY cl.Ville
 
 --Q05
-SELECT cl.Nom
-FROM Clients cl
-WHERE 
+SELECT cl.nom
+FROM Clients cl INNER JOIN Commande co
+ON cl.No_client = co.No_client
+WHERE co.Montant > (SELECT AVG(montant) FROM Commande)
 
 --Q06
 SELECT *
@@ -60,7 +58,7 @@ FROM Clients
 WHERE No_Client NOT IN (SELECT No_client FROM Commande)
 
 --Q07
-SELECT COUNT(co.No_commande)
+SELECT COUNT(co.No_commande) 'Nombre de commandes par des Lavallois'
 FROM Commande co, Clients cl
 WHERE co.No_client IN (SELECT cl.No_Client FROM Clients WHERE cl.Ville = 'Laval') 
 
@@ -70,6 +68,7 @@ FROM Commande
 WHERE No_client NOT IN (SELECT No_Client FROM Clients)
 
 --Q09
-SELECT cl.Nom 'Client.nom', co.no_commande 'Commande.no_commande'
+SELECT cl.nom 'Client.nom', co.no_commande 'Commande.no_commande'
 FROM Clients cl FULL OUTER JOIN Commande co
-ON 
+ON co.No_client = cl.No_client
+ORDER BY cl.Nom

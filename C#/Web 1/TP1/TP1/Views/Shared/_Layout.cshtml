@@ -1,21 +1,33 @@
 ﻿@Styles.Render("~/Content/css")
 <body class="col-xs-offset-1 col-xs-10">
     <header>
-        <div class="image-center"></div>
-        <nav class="">
-            <ul class="nav nav-tabs nav-justified">
-                <li id="acceuil">@Html.ActionLink("accueil", "Index", "Home")</li>
-                <li id="apropos">@Html.ActionLink("à propos", "Apropos", "Home")</li>
-                <li id="listeTache">@Html.ActionLink("mes tâches", "Index", "Task")</li>
-                <li id="createTache">@Html.ActionLink("nouvelle tâche", "Create", "Task")</li>
-            </ul>
-        </nav>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Travail pratique 1", "Index", "Home", new { area = "" }, new { @class = "navbar-brand image-center" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="acceuil">@Html.ActionLink("accueil", "Index", "Home")</li>
+                        <li id="apropos">@Html.ActionLink("à propos", "Apropos", "Home")</li>
+                        <li id="listeTache">@Html.ActionLink("mes tâches", "Index", "Task")</li>
+                        <li id="createTache">@Html.ActionLink("nouvelle tâche", "Create", "Task")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>
     </header>
-    <section>
+    <section class="container body-content">
         @RenderBody()
     </section>
     <footer>
-        <p>© Nicolas Berbiche et Vincent Turgeon pour le TP1</p>
+        <p>&copy; @DateTime.Now.Year Nicolas Berbiche et Vincent Turgeon pour le TP1</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
@@ -30,7 +42,11 @@
             $('#acceuil').addClass('active');
         else if (/^\/Task\/Create$/i.test(a))
             $('#createTache').addClass('active');
-        else
-            $('#listeTache').addClass('active');S
+        else if (/^\/Task\/.*$/i.test(a))
+            $('#listeTache').addClass('active');
+        else if (/^\/Auth\/Create$/i.test(a))
+            $('#registerLink').addClass('active');
+        else if (/^\/Auth\/Login$/i.test(a))
+            $('#loginLink').addClass('active');
     </script>
 </body>
