@@ -26,7 +26,7 @@ CREATE TABLE [toys4us_Age_Categories]
 	CONSTRAINT CK_toys4usAgeCategories_AgeStart
 		CHECK(Age_Start >= 0 AND Age_Start < Age_End),
 	CONSTRAINT CK_toys4usAgeCategories_AgeEnd
-		CHECK(Age_End =< INTEGER.MAX)
+		CHECK(Age_End =< 18)
 )
 GO
 
@@ -40,7 +40,7 @@ GO
 CREATE TABLE [toys4us_Brands]
 (
 	Id          INTEGER IDENTITY(1,1) PRIMARY KEY,
-	Name        VARCHAR(80) NOT NULL,
+	Name        VARCHAR(100) NOT NULL,
 	Description VARCHAR(2000),
 	Website     VARCHAR(1000),
 	Address     VARCHAR(400),

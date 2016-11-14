@@ -5,24 +5,24 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Microsoft.AspNet.Identity;
-using TP1.Models;
+using TP2.Models;
 
 namespace TP2.Controllers
 {
-    public class TaskController : Controller
+    public class ToysController : Controller
     {
         private const string Erreur = "~/Views/Shared/Error.cshtml";
 
         [Authorize]
         public ActionResult Index()
         {
-            return View(Task.GetList(User.Identity.Name));
+            return View(Toys.GetList());
         }
 
         [Authorize]
         public ActionResult Details(int id)
         {
-            return View(Task.FindOne(id));
+            return View(Toys.FindOne(id));
         }
 
         [Authorize]
@@ -69,17 +69,6 @@ namespace TP2.Controllers
         public ActionResult Delete(int id, Task t)
         {
             if (Task.Destroy(id))
-                return RedirectToAction("Index");
-            return View(Erreur);
-        }
-
-        [Authorize]
-        [HttpPost]
-        public ActionResult Terminate(int id)
-        {
-            Task asd = Task.FindOne(id);
-            asd.Done = true;
-            if (asd.Update())
                 return RedirectToAction("Index");
             return View(Erreur);
         }
