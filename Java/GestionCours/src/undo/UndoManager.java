@@ -8,28 +8,37 @@ import pile.Pile;
 
 public class UndoManager {
 
-    private static Pile<Operation> operationPile;
+    private static Pile<Operation> undoPile, redoPile;
 
     private UndoManager() {
-        operationPile = new Pile<>();
+        operationPile = new Pile<>(), redoPile = new Pile<>();
     }
 
-    public void faire(Etudiant e, CoursGroupe cg, EtudiantOperation.TypeOperation type) {
+    public void do(Etudiant e, CoursGroupe cg, EtudiantOperation.TypeOperation type) {
         EtudiantOperation operation = new EtudiantOperation(e, cg, type);
-        operationPile.push(operation);
         operation.faire();
+        undoPile.push(operation);
     }
 
-    public void faire(Note n, int ancienneNote, int nouvelleNote) {
+    public void do(Note n, int ancienneNote, int nouvelleNote) {
         NoteOperation operation = new NoteOperation(n, ancienneNote, nouvelleNote);
         operation.faire();
-        operationPile.push(operation);
+        undoPile.push(operation);
     }
 
-    public void annuler() {
+    public void undo() {
         Operation operation = operationPile.pop();
         if (operation != null) {
             operation.annuler();
+            redoPile.push(operation);
+        }
+    }
+    
+    public void redo() {
+        Operation operation = redoPile.pop();
+        if (operation != null) {
+            operation.faire();
+            undoPile.push(operation);
         }
     }
 
