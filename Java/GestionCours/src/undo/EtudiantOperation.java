@@ -5,16 +5,11 @@ import cegep.Etudiant;
 
 class EtudiantOperation extends Operation {
 
-    private final TypeOperation type;
+    private final UndoManager.TypeOperation type;
     private final Etudiant etudiant;
     private final CoursGroupe coursGroupe;
 
-    public enum TypeOperation {
-        SUPPRIMER,
-        AJOUTER
-    }
-
-    EtudiantOperation(Etudiant etudiant, CoursGroupe coursGroupe, TypeOperation type) {
+    EtudiantOperation(Etudiant etudiant, CoursGroupe coursGroupe, UndoManager.TypeOperation type) {
         this.etudiant = etudiant;
         this.coursGroupe = coursGroupe;
         this.type = type;

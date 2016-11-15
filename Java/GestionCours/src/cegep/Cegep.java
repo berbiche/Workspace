@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Cegep {
 	
-	private ArrayList<Etudiant> listeEtudiant;
+	private ArrayList<Etudiant> listeEtudiants;
 	private ArrayList<Professeur> listeProfesseur;
 	private ArrayList<Cours> listeCours;
 	private ArrayList<CoursGroupe> listeCoursGroupe;
@@ -12,7 +12,7 @@ public class Cegep {
     private int numDossierEtudiant;
 
 	public Cegep() {
-        listeEtudiant = new ArrayList<>();
+        listeEtudiants = new ArrayList<>();
         listeProfesseur = new ArrayList<>();
         listeCours = new ArrayList<>();
         listeCoursGroupe = new ArrayList<>();
@@ -27,7 +27,7 @@ public class Cegep {
 	 */
 	public Etudiant admettreEtudiant(String noDossier) {
         Etudiant e = new Etudiant(noDossier);
-        listeEtudiant.add(e);
+        listeEtudiants.add(e);
         return e;
     }
 
@@ -39,7 +39,7 @@ public class Cegep {
      */
 	public Etudiant admettreEtudiant(String nomFamille, String prenom) {
         Etudiant e = new Etudiant(nomFamille, prenom, (numDossierEtudiant++)+"");
-        listeEtudiant.add(e);
+        listeEtudiants.add(e);
         return e;
     }
 	
@@ -49,7 +49,7 @@ public class Cegep {
 	 * @return null si aucun étudiant possède ce numéro de dossier sinon Etudiant
 	 */
 	public Etudiant getEtudiant(String noDossier) {
-		for (Etudiant e: listeEtudiant) {
+		for (Etudiant e: listeEtudiants) {
 			if (e.getNoDossier().equals(noDossier))
 				return e;
 		}
@@ -63,11 +63,19 @@ public class Cegep {
      * @return null si aucun étudiant possède ce numéro de dossier sinon Etudiant
      */
 	public Etudiant getEtudiant(String nomFamille, String prenom) {
-        for (Etudiant e: listeEtudiant) {
+        for (Etudiant e: listeEtudiants) {
             if (e.getNomFamille().equals(nomFamille) && e.getPrenom().equals(prenom))
                 return e;
         }
         return null;
+    }
+
+    /**
+     * Obtenir la liste des étudiants qui vont à l'école
+     * @return liste des étudiants
+     */
+    public ArrayList<Etudiant> getListeEtudiants() {
+        return listeEtudiants;
     }
 
 	/**
@@ -77,7 +85,7 @@ public class Cegep {
 	 */
 	public ArrayList<Etudiant> rechercherEtudiant(String nomFamille) {
 		ArrayList<Etudiant> etudiants = new ArrayList<Etudiant>();
-		for (Etudiant i: listeEtudiant) {
+		for (Etudiant i: listeEtudiants) {
 			if (i.getNomFamille().equals(nomFamille))
 				etudiants.add(i);
 		}
