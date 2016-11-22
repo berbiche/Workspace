@@ -18,17 +18,19 @@ namespace TP2.Models
         public int Id { get; set; }
 
         [StringLength(40)]
+        [DataType(DataType.Text)]
         [DisplayName("Nom complet")]
         public string FullName { get; set; }
 
         [Required]
         [EmailAddress]
+        [DataType(DataType.EmailAddress)]
         [StringLength(255, ErrorMessage = "Adresse courriel invalide")]
         [Display(Name = "Courrier électronique")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(40, ErrorMessage = "La chaîne \"{0}\" doit comporter au moins {2} caractères.", MinimumLength = 8)]
+        [StringLength(40, ErrorMessage = "Le champs \"{0}\" doit comporter au moins {2} caractères.", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "Mot de passe")]
         public string Password { get; set; }
@@ -42,14 +44,14 @@ namespace TP2.Models
 
         public bool SaveAsNew()
         {
-            string cN = ConfigurationManager.ConnectionStrings["TaskManager"].ConnectionString;
+            string cN = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
             try
             {
 
                 using (SqlConnection cnx = new SqlConnection(cN))
                 {
                     // Utilisation de la connexion
-                    string requete = "INSERT INTO [User] (FullName, Email, Password) "
+                    string requete = "INSERT INTO [aspnet_User] (FullName, Email, Password) "
                                    + "OUTPUT INSERTED.ID "
                                    + "VALUES (@FullName, @Email, @Password)";
 
@@ -82,14 +84,14 @@ namespace TP2.Models
 
         public static bool IsValid(string email, string password)
         {
-            string cN = ConfigurationManager.ConnectionStrings["TaskManager"].ConnectionString;
+            string cN = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
 
             try
             {
 
                 using (SqlConnection cnx = new SqlConnection(cN))
                 {
-                    string requete = "SELECT * FROM [User] WHERE Email = @email";
+                    string requete = "SELECT * FROM [aspnet_User] WHERE Email = @email";
                     using (SqlCommand cmd = new SqlCommand(requete, cnx))
                     {
                         cmd.CommandType = System.Data.CommandType.Text;
