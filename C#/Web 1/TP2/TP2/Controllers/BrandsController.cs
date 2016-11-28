@@ -1,98 +1,115 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
-using Microsoft.AspNet.Identity;
 using TP2.Models;
 
 namespace TP2.Controllers
 {
     [Authorize]
-    public class ToysController : Controller
+    public class BrandsController : Controller
     {
 
+        // GET: Brands
         public ActionResult Index()
         {
-            return View(Toys.GetList());
+            return View(Brands.GetList());
         }
 
-        [ValidateAntiForgeryToken]
+        // GET: Brands/Details/5
         public ActionResult Details(int? id)
         {
-            if (!id.HasValue)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Toys toys = Toys.FindOne(id.Value);
-            if (toys == null)
+            Brands brands = Brands.FindOne(id.Value);
+            if (brands == null)
+            {
                 return HttpNotFound();
-            return View(toys);
+            }
+            return View(brands);
         }
 
+        // GET: Brands/Create
         public ActionResult Create()
         {
-            Toys emptyToy = new Toys();
-            return View(emptyToy);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Toys newToy)
-        {
-            if (ModelState.IsValid)
-                if (newToy.SaveAsNew())
-                    return RedirectToAction("Index");
-            ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
             return View();
         }
 
+        // POST: Brands/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Brands brands)
+        {
+            if (ModelState.IsValid)
+            {
+                if (brands.SaveAsNew())
+                    return RedirectToAction("Index");
+                return new HttpStatusCodeResult(HttpStatusCode.InternalServerError);
+            }
+            ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
+            return View(brands);
+        }
+
+        // GET: Brands/Edit/5
         public ActionResult Edit(int? id)
         {
             if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Toys toys = Toys.FindOne(id.Value);
-            if (toys == null)
+            Brands brands = Brands.FindOne(id.Value);
+            if (brands == null)
+            {
                 return HttpNotFound();
-            return View(toys);
+            }
+            return RedirectToAction("Index");
         }
 
+        // POST: Brands/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Toys toy)
+        public ActionResult Edit(Brands brands)
         {
             if (ModelState.IsValid)
-                if (toy.Update())
-                    return RedirectToAction("Index");
+            {
+                brands.Update();
+                return RedirectToAction("Index");
+            }
             ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
-            return View();
+            return View(brands);
         }
 
-        [ValidateAntiForgeryToken]
+        // GET: Brands/Delete/5
         public ActionResult Delete(int? id)
         {
             if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Toys toys = Toys.FindOne(id.Value);
-            if (toys == null)
+            Brands brands = Brands.FindOne(id.Value);
+            if (brands == null)
+            {
                 return HttpNotFound();
-            return View(toys);
+            }
+            return View(brands);
         }
 
+        // POST: Brands/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            if (Toys.Destroy(id))
+            if (Brands.Destroy(id))
                 return RedirectToAction("Index");
             ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
             return View();
         }
+
     }
 }

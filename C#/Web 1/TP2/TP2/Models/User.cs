@@ -15,12 +15,12 @@ namespace TP2.Models
     public class User
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [StringLength(40)]
         [DataType(DataType.Text)]
         [DisplayName("Nom complet")]
-        public string FullName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [EmailAddress]
@@ -51,25 +51,25 @@ namespace TP2.Models
                 using (SqlConnection cnx = new SqlConnection(cN))
                 {
                     // Utilisation de la connexion
-                    string requete = "INSERT INTO [aspnet_User] (FullName, Email, Password) "
+                    string requete = "INSERT INTO [aspnet_User] (Name, Email, [Password]) "
                                    + "OUTPUT INSERTED.ID "
-                                   + "VALUES (@FullName, @Email, @Password)";
+                                   + "VALUES (@Name, @Email, @Password)";
 
                     using (SqlCommand cmd = new SqlCommand(requete, cnx))
                     {
                         cmd.CommandType = System.Data.CommandType.Text;
 
-                        cmd.Parameters.Add("FullName", SqlDbType.VarChar);
+                        cmd.Parameters.Add("Name", SqlDbType.VarChar);
                         cmd.Parameters.Add("Email", SqlDbType.VarChar);
                         cmd.Parameters.Add("Password", SqlDbType.NVarChar);
 
                         //donner des valeurs aux paramètres
-                        cmd.Parameters["FullName"].SqlValue = this.FullName;
+                        cmd.Parameters["Name"].SqlValue = this.Name;
                         cmd.Parameters["Email"].SqlValue = this.Email;
                         cmd.Parameters["Password"].SqlValue = Encrypt(this.Password);
 
                         cnx.Open();
-                        this.Id = (int)cmd.ExecuteScalar();
+                        this.Id = Guid.Parse(cmd.ExecuteScalar().ToString());
                         cnx.Close();
 
                         return true;

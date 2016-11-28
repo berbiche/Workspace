@@ -12,7 +12,7 @@ CREATE TABLE [aspnet_User]
 	Id         UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
 	Name       VARCHAR(40),
 	Email      VARCHAR(255) UNIQUE NOT NULL,
-	[Password] NVARCHAR(32) NOT NULL,
+	[Password] NCHAR(32) NOT NULL,
 )
 GO
 
@@ -58,26 +58,9 @@ CREATE TABLE [toys4us_Toys]
 	Date_Added   DATE DEFAULT GETDATE() NOT NULL,
 	Gender       CHAR(1) NOT NULL,
 	Brand        INTEGER REFERENCES [toys4us_Brands](Id),
-	--Age_Id       INTEGER REFERENCES [toys4us_Age_Categories](Id),
-	--Category_Id  INTEGER REFERENCES [toys4us_Categories](Id),
-	Price        MONEY CHECK (Price >= 0),
+--Age_Id       INTEGER REFERENCES [toys4us_Age_Categories](Id),
+--Category_Id  INTEGER REFERENCES [toys4us_Categories](Id),
+	Price        SMALLMONEY CHECK (Price >= 0),
 	CONSTRAINT CK_toys4us_Gender CHECK(Gender IN ('M','F','O'))
 )
 GO
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

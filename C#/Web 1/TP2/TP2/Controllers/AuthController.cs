@@ -1,65 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using TP1.Models;
+using TP2.Models;
 
 namespace TP2.Controllers
 {
     public class AuthController : Controller
     {
-        private const string Erreur = "~/Views/Shared/Error.cshtml";
 
         [HttpGet]
-        [AllowAnonymous]
         public ActionResult Create()
         {
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction("Index", "Home");
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public ActionResult Create(User user)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
+                if (user.SaveAsNew())
                 {
-                    if (user.SaveAsNew())
-                    {
-                        FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
-                        return RedirectToAction("Index", "Home");
-                    }
-                    return RedirectToAction("Create");
+                    FormsAuthentication.SetAuthCookie(user.Name, false);
+                    return RedirectToAction("Index", "Home");
                 }
-                return View(Erreur);
+                return View(user);
             }
-            catch
-            {
-                return View(Erreur);
-            }
+            ViewBag.Error = "Une erreur est survenue en essayant de créer l'utilisateur.\nVeuillez réessayer.";
+            return View();
         }
 
         [HttpGet]
-        [AllowAnonymous]
         public ActionResult Login()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+                return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Login(string email, string password, string returnUrl = "")
         {
             ViewBag.error = string.Empty;
             ViewBag.ReturnUrl = returnUrl;
 
-            if (password.Length < 8 && password.Length > 40 && !TP1.Models.User.IsValid(email, password))
+            if (password.Length < 8 || password.Length > 40 || Models.User.IsValid(email, password))
             {
-                ViewBag.error = "Le compte n'existe pas ou le mot de passe est invalide";
+                ViewBag.Error = "Le compte n'existe pas ou le mot de passe est invalide";
                 return View();
             }
 
@@ -70,7 +64,7 @@ namespace TP2.Controllers
 
             return Redirect(returnUrl);
         }
-        
+
         [ValidateAntiForgeryToken]
         public ActionResult Logout()
         {

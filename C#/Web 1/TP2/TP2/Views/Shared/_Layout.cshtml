@@ -1,7 +1,7 @@
 ﻿@Styles.Render("~/Content/css")
 <body class="col-xs-offset-1 col-xs-10">
     <header>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -9,25 +9,32 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @Html.ActionLink("Travail pratique 1", "Index", "Home", new { area = "" }, new { @class = "navbar-brand image-center" })
+                    @Html.ActionLink("TP2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand image-center" })
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li id="acceuil">@Html.ActionLink("accueil", "Index", "Home")</li>
-                        <li id="apropos">@Html.ActionLink("à propos", "Apropos", "Home")</li>
-                        <li id="listeTache">@Html.ActionLink("mes tâches", "Index", "Task")</li>
-                        <li id="createTache">@Html.ActionLink("nouvelle tâche", "Create", "Task")</li>
+                        <li id="acceuil">@Html.ActionLink("Toys4Us", "Index", "Home")</li>
+                        <li id="listeToys">@Html.ActionLink("Jouets", "Index", "Toys")</li>
+                        <li id="createToys">@Html.ActionLink("Ajouter un jouet", "Create", "Toys")</li>
+                        <li id="listeBrands">@Html.ActionLink("Compagnies", "Index", "Brands")</li>
+                        <li id="createBrands">@Html.ActionLink("Ajouter une compagnie", "Create", "Brands")</li>
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
             </div>
         </div>
     </header>
-    <section class="container body-content">
-        @RenderBody()
-    </section>
+<section class="container body-content">
+    @if (ViewBag.Error != null)
+    {
+        {
+            Html.RenderPartial("_Error");
+        }
+    }
+    @RenderBody()
+</section>
     <footer>
-        <p>&copy; @DateTime.Now.Year Nicolas Berbiche et Vincent Turgeon pour le TP1</p>
+        <p>&copy; @DateTime.Now.Year Nicolas Berbiche - TP2</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
@@ -35,15 +42,17 @@
     @Scripts.Render("~/bundles/bootstrap")
 
     <script>
-        const a = window.location.pathname;
-        if (/^\/Home\/Apropos$/i.test(a))
-            $('#apropos').addClass('active');
-        else if (/^\/$/.test(a))
+        var a = window.location.pathname;
+        if (/^\/$/.test(a))
             $('#acceuil').addClass('active');
-        else if (/^\/Task\/Create$/i.test(a))
-            $('#createTache').addClass('active');
-        else if (/^\/Task\/.*$/i.test(a))
-            $('#listeTache').addClass('active');
+        else if (/^\/Toys\/Create$/i.test(a))
+            $('#createToys').addClass('active');
+        else if (/^\/Toys\/.*$/i.test(a))
+            $('#listeToys').addClass('active');
+        else if (/^\/Brands\/Create$/i.test(a))
+            $('#createBrands').addClass('active');
+        else if (/^\/Brands\/.*$/i.test(a))
+            $('#listeBrands').addClass('active');
         else if (/^\/Auth\/Create$/i.test(a))
             $('#registerLink').addClass('active');
         else if (/^\/Auth\/Login$/i.test(a))

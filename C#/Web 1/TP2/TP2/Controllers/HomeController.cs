@@ -14,11 +14,5 @@ namespace TP2.Controllers
             return View();
         }
 
-        // GET: Apropos
-        [Route("Apropos")]
-        public ActionResult Apropos()
-        {
-            return View();
-        }
     }
 }
