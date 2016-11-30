@@ -36,6 +36,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GetGender())
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.DateAdded)
         </dt>
 
@@ -57,8 +65,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-danger" /> |
-            @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-primary" })
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+            <input type="submit" value="Delete" class="btn btn-danger" />
         </div>
     }
 </div>

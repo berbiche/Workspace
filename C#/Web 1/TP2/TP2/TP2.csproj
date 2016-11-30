@@ -196,10 +196,10 @@
     <Content Include="Views\Brands\Index.cshtml" />
     <Content Include="Views\Toys\Index.cshtml" />
     <Content Include="Views\Toys\Details.cshtml" />
-    <Content Include="Views\Toys\Create.cshtml" />
     <Content Include="Views\Toys\Edit.cshtml" />
     <Content Include="Views\Toys\Delete.cshtml" />
     <Content Include="Views\Shared\_Error.cshtml" />
+    <Content Include="Views\Toys\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.1.0.slim.min.map" />

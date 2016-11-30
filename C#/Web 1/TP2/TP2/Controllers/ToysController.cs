@@ -18,8 +18,7 @@ namespace TP2.Controllers
         {
             return View(Toys.GetList());
         }
-
-        [ValidateAntiForgeryToken]
+        
         public ActionResult Details(int? id)
         {
             if (!id.HasValue)
@@ -45,7 +44,9 @@ namespace TP2.Controllers
             if (ModelState.IsValid)
                 if (newToy.SaveAsNew())
                     return RedirectToAction("Index");
-            ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
+                else
+                    ViewBag.Error = "Une erreur est survenue en essayant d'ajouter le jouet à la base de données";
+            ViewBag.Error = ViewBag.Error ?? string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
             return View();
         }
 
@@ -68,11 +69,12 @@ namespace TP2.Controllers
             if (ModelState.IsValid)
                 if (toy.Update())
                     return RedirectToAction("Index");
-            ViewBag.Error = string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
+                else
+                    ViewBag.Error = "Une erreur est survenue en essayant de mettre à jour la base de données";
+            ViewBag.Error =  ViewBag.Error ?? string.Join("\n", ModelState.Values.SelectMany(x => x.Errors));
             return View();
         }
-
-        [ValidateAntiForgeryToken]
+        
         public ActionResult Delete(int? id)
         {
             if (!id.HasValue)

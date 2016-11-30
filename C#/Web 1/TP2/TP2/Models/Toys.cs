@@ -10,12 +10,12 @@ namespace TP2.Models
 {
     public enum Genders
     {
-        [Display(Name = "Garçon")]
-        M,
-        [Display(Name = "Fille")]
-        F,
-        [Display(Name = "Unisexe")]
-        O
+        [Display(Name = "Unisexe", ShortName = "Unisexe", Description = "Unisexe")]
+        O = 0,
+        [Display(Name = "Garçon", ShortName = "Garçon", Description = "Garçon")]
+        M = 1,
+        [Display(Name = "Fille", ShortName = "Fille", Description = "Fille")]
+        F = 2
     }
 
     public class Toys
@@ -25,33 +25,31 @@ namespace TP2.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Nom du jouet")]
+        [Display(Name = "Nom")]
         [StringLength(200, ErrorMessage = "Le nom du jouet ne peut pas dépasser {0} caractères")]
         public string Name { get; set; }
 
-        [Display(Name = "Description du jouet")]
+        [Display(Name = "Description")]
         [DataType(DataType.MultilineText)]
         [StringLength(400, ErrorMessage = "La description du jouet ne peut pas dépasser {0} caractères")]
         public string Description { get; set; }
 
         [DataType(DataType.Currency)]
-        [DisplayFormat(DataFormatString = "{0:c}", ApplyFormatInEditMode = true)]
         [Display(Name = "Prix")]
+        [DisplayFormat(DataFormatString = "{0:C0}", ApplyFormatInEditMode = false)]
         [Range(0.0, 214748.3647)] //la limite de smallmoney
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         [Display(Name = "Date d'ajout")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
 
         [Required]
-        [DataType(DataType.Custom)]
         [Display(Name = "Sexe")]
         public Genders Gender { get; set; }
 
-        [Display(Name = "Compagnie")]
-        [DisplayFormat(NullDisplayText = "Aucune compagnie associée")]
+        [Display(Name = "# de compagnie")]
+        [DisplayFormat(ConvertEmptyStringToNull = true)]
         public int? BrandId { get; set; }
 
         //[Display(Name = "Catégorie d'âge")]
@@ -60,52 +58,71 @@ namespace TP2.Models
         //[Display(Name = "Catégorie de jouet")]
         //public Categories Category { get; set; }
 
+        public string GetGender
+        {
+            get { return this.Gender.GetType().GetProperty("Display").Name; }
+        }
+
         public static List<Toys> GetList()
         {
             string cStr = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
-            string requete = "SELECT * FROM [toys4us_Toys]";
+            List<Toys> toysList = new List<Toys>();
 
-            using (SqlConnection cnx = new SqlConnection(cStr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(requete, cnx))
+                using (SqlConnection cnx = new SqlConnection(cStr))
                 {
-                    cnx.Open();
-                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    string requete = "SELECT * FROM [toys4us_Toys]";
+                    using (SqlCommand cmd = new SqlCommand(requete, cnx))
                     {
-                        List<Toys> toysList = new List<Toys>();
-                        while (dataReader.Read())
+                        cnx.Open();
+                        using (SqlDataReader dataReader = cmd.ExecuteReader())
                         {
-                            Toys toy = new Toys();
-                            toy.Id = (int)dataReader["id"];
-                            toy.Description = (string)dataReader["Description"];
-                            toy.Name = (string)dataReader["Name"];
-                            toy.Price = (double)dataReader["Price"];
-                            toy.DateAdded = (DateTime)dataReader["Date_Added"];
-                            toy.BrandId = (int)dataReader["Brand"];
-                            toy.Gender = (Genders)dataReader["Gender"];
-                            toysList.Add(toy);
+                            while (dataReader.Read())
+                            {
+                                Toys toys = new Toys();
+                                toys.Id = (int)dataReader["id"];
+                                toys.DateAdded = (DateTime)dataReader["Date_Added"];
+                                toys.Description = (string)dataReader["Description"];
+                                toys.Name = (string)dataReader["Name"];
+                                toys.Price = (decimal)dataReader["Price"];
+                                toys.BrandId = dataReader["Brand"] as int? ?? null;
+                                toys.Gender = (Genders)Enum.Parse(typeof(Genders), (string)dataReader["Gender"]);
+                                toysList.Add(toys);
+                            }
+                            return toysList;
                         }
-                        return toysList;
                     }
                 }
+            }
+            catch
+            {
+                return toysList;
             }
         }
 
         public static bool Destroy(int id)
         {
             string cN = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
-            string requete = "DELETE FROM [toys4us_Toys] WHERE Id = " + id;
 
-            using (SqlConnection cnx = new SqlConnection(cN))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(requete, cnx))
+                using (SqlConnection cnx = new SqlConnection(cN))
                 {
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cnx.Open();
-                    cmd.ExecuteNonQuery();
-                    cnx.Close();
-                    return true;
+                    string requete = "DELETE FROM [toys4us_Toys] WHERE Id = " + id;
+                    using (SqlCommand cmd = new SqlCommand(requete, cnx))
+                    {
+                        cmd.CommandType = System.Data.CommandType.Text;
+                        cnx.Open();
+                        cmd.ExecuteNonQuery();
+                        cnx.Close();
+                        return true;
+                    }
                 }
+            }
+            catch
+            {
+                return false;
             }
         }
 
@@ -113,28 +130,34 @@ namespace TP2.Models
         {
             string cStr = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
 
-            using (SqlConnection cnx = new SqlConnection(cStr))
+            try
             {
-                string requete = "SELECT * FROM [toys4us_Toys] WHERE Id =" + id;
-                using (SqlCommand cmd = new SqlCommand(requete, cnx))
+                using (SqlConnection cnx = new SqlConnection(cStr))
                 {
-                    cnx.Open();
-                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    string requete = "SELECT * FROM [toys4us_Toys] WHERE Id =" + id;
+                    using (SqlCommand cmd = new SqlCommand(requete, cnx))
                     {
-                        Toys toy = new Toys();
-                        while (dataReader.Read())
+                        cnx.Open();
+                        using (SqlDataReader dataReader = cmd.ExecuteReader())
                         {
-                            toy.Id = (int)dataReader["id"];
-                            toy.Description = (string)dataReader["Description"];
-                            toy.Name = (string)dataReader["Name"];
-                            toy.Price = (double)dataReader["Price"];
-                            toy.DateAdded = (DateTime)dataReader["Date_Added"];
-                            toy.BrandId = (int)dataReader["Brand"];
-                            toy.Gender = (Genders)dataReader["Gender"];
+                            dataReader.Read();
+                            return new Toys
+                            {
+                                DateAdded = (DateTime)dataReader["Date_Added"],
+                                Id = (int)dataReader["id"],
+                                Description = (string)dataReader["Description"],
+                                Name = (string)dataReader["Name"],
+                                Price = (decimal)dataReader["Price"],
+                                BrandId = dataReader["Brand"] as int? ?? null,
+                                Gender = (Genders)Enum.Parse(typeof(Genders), (string)dataReader["Gender"])
+                            };
                         }
-                        return toy;
                     }
                 }
+            }
+            catch
+            {
+                return null;
             }
         }
 
@@ -149,7 +172,7 @@ namespace TP2.Models
                 {
                     // Utilisation de la connexion
                     string requete = "INSERT INTO [toys4us_Toys] (Name, Description, Price"
-                                     + ", DateAdded, Gender, Brand) VALUES (@Name, @Description"
+                                     + ", Date_Added, Gender, Brand) VALUES (@Name, @Description"
                                      + ", @Price, @DateAdded, @Gender, @BrandId);";
 
                     using (SqlCommand cmd = new SqlCommand(requete, cnx))
@@ -205,7 +228,7 @@ namespace TP2.Models
                         + "Price=@Price,"
                         + "Date_Added=@DateAdded,"
                         + "Gender=@Gender,"
-                        + "Brand=@BrandId,"
+                        + "Brand=@BrandId "
                         + "WHERE Id = " + this.Id;
 
                     using (SqlCommand cmd = new SqlCommand(requete, cnx))
@@ -239,7 +262,7 @@ namespace TP2.Models
                     }
                 }
             }
-            catch
+            catch (SqlException e)
             {
                 return false;
             }

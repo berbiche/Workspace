@@ -28,7 +28,7 @@ header li.active a {
 
 section {
     padding: 20px;
-    padding-top: 60px;
+    margin-top: -20px;
     background-color: white;
     height: inherit;
 }

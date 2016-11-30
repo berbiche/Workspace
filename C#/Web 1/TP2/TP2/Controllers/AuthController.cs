@@ -51,7 +51,7 @@ namespace TP2.Controllers
             ViewBag.error = string.Empty;
             ViewBag.ReturnUrl = returnUrl;
 
-            if (password.Length < 8 || password.Length > 40 || Models.User.IsValid(email, password))
+            if (password.Length < 8 || password.Length > 40 || !Models.User.IsValid(email, password))
             {
                 ViewBag.Error = "Le compte n'existe pas ou le mot de passe est invalide";
                 return View();
@@ -60,7 +60,7 @@ namespace TP2.Controllers
             FormsAuthentication.SetAuthCookie(email, false);
 
             if (returnUrl == "")
-                return RedirectToAction("Index", "Task");
+                return RedirectToAction("Index", "Home");
 
             return Redirect(returnUrl);
         }
