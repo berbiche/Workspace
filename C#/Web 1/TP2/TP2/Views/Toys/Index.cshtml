@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-xs btn-success" })
 </p>
 <table class="table table-striped table-responsive">
     <tr>
@@ -51,8 +51,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.DateAdded)
         </td>
+        @{
+            var compagnie = item.GetBrands().Find(x => x.Id == item.BrandId);
+            string nomCompagnie = compagnie != null ? compagnie.Name : "";
+        }
         <td>
-            @Html.DisplayFor(modelItem => item.BrandId)
+            @Html.DisplayFor(modelItem => nomCompagnie)
         </td>
         <td>
             <div class="btn-group">

@@ -37,8 +37,9 @@ namespace TP2.Controllers
         }
 
         [HttpGet]
-        public ActionResult Login()
+        public ActionResult Login(string ReturnUrl = "")
         {
+            ViewBag.ReturnUrl = ReturnUrl;
             if (!User.Identity.IsAuthenticated)
                 return View();
             return RedirectToAction("Index", "Home");
@@ -46,11 +47,8 @@ namespace TP2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string email, string password, string returnUrl = "")
+        public ActionResult Login(string email, string password, string ReturnUrl = "")
         {
-            ViewBag.error = string.Empty;
-            ViewBag.ReturnUrl = returnUrl;
-
             if (password.Length < 8 || password.Length > 40 || !Models.User.IsValid(email, password))
             {
                 ViewBag.Error = "Le compte n'existe pas ou le mot de passe est invalide";
@@ -59,10 +57,10 @@ namespace TP2.Controllers
 
             FormsAuthentication.SetAuthCookie(email, false);
 
-            if (returnUrl == "")
+            if (ReturnUrl == "")
                 return RedirectToAction("Index", "Home");
 
-            return Redirect(returnUrl);
+            return Redirect(ReturnUrl);
         }
 
         [ValidateAntiForgeryToken]

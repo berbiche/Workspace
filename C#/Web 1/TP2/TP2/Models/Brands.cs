@@ -56,14 +56,15 @@ namespace TP2.Models
                         List<Brands> brandsList = new List<Brands>();
                         while (dataReader.Read())
                         {
-                            Brands brands = new Brands();
-                            brands.Id = (int)dataReader["id"];
-                            brands.Description = (string)dataReader["Description"];
-                            brands.Name = (string)dataReader["Name"];
-                            brands.Address = (string)dataReader["Address"];
-                            brands.Phone = (string)dataReader["Phone"];
-                            brands.Website = (string)dataReader["Website"];
-                            brandsList.Add(brands);
+                            brandsList.Add(new Brands
+                            {
+                                Id = (int)dataReader["id"],
+                                Name = (string)dataReader["Name"],
+                                Description = dataReader["Description"] as string ?? "",
+                                Address = dataReader["Address"] as string ?? "",
+                                Phone = dataReader["Phone"] as string ?? "",
+                                Website = dataReader["Website"] as string ?? ""
+                            });
                         }
                         return brandsList;
                     }
@@ -93,27 +94,33 @@ namespace TP2.Models
         {
             string cStr = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
 
-            using (SqlConnection cnx = new SqlConnection(cStr))
+            try
             {
-                string requete = "SELECT * FROM [toys4us_Brands] WHERE Id =" + id;
-                using (SqlCommand cmd = new SqlCommand(requete, cnx))
+                using (SqlConnection cnx = new SqlConnection(cStr))
                 {
-                    cnx.Open();
-                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    string requete = "SELECT * FROM [toys4us_Brands] WHERE Id =" + id;
+                    using (SqlCommand cmd = new SqlCommand(requete, cnx))
                     {
-                        Brands brands = new Brands();
-                        while (dataReader.Read())
+                        cnx.Open();
+                        using (SqlDataReader dataReader = cmd.ExecuteReader())
                         {
-                            brands.Id = (int)dataReader["id"];
-                            brands.Description = (string)dataReader["Description"];
-                            brands.Name = (string)dataReader["Name"];
-                            brands.Address = (string)dataReader["Address"];
-                            brands.Phone = (string)dataReader["Phone"];
-                            brands.Website = (string)dataReader["Website"];
+                            dataReader.Read();
+                            return new Brands
+                            {
+                                Id = (int) dataReader["id"],
+                                Name = (string) dataReader["Name"],
+                                Description = dataReader["Description"] as string ?? "",
+                                Address = dataReader["Address"] as string ?? "",
+                                Phone = dataReader["Phone"] as string ?? "",
+                                Website = dataReader["Website"] as string ?? ""
+                            };
                         }
-                        return brands;
                     }
                 }
+            }
+            catch (Exception e)
+            {
+                return null;
             }
         }
 
@@ -138,16 +145,16 @@ namespace TP2.Models
                         //définir les paramètres
                         cmd.Parameters.Add("Name", SqlDbType.NVarChar);
                         cmd.Parameters.Add("Description", SqlDbType.NVarChar);
-                        cmd.Parameters.Add("Website", SqlDbType.Int);
-                        cmd.Parameters.Add("Address", SqlDbType.DateTime2);
-                        cmd.Parameters.Add("Phone", SqlDbType.DateTime2);
+                        cmd.Parameters.Add("Website", SqlDbType.NVarChar);
+                        cmd.Parameters.Add("Address", SqlDbType.NVarChar);
+                        cmd.Parameters.Add("Phone", SqlDbType.VarChar);
 
                         //donner des valeurs aux paramètres
                         cmd.Parameters["Name"].SqlValue = this.Name;
-                        cmd.Parameters["Description"].SqlValue = this.Description;
-                        cmd.Parameters["Website"].SqlValue = this.Website;
-                        cmd.Parameters["Address"].SqlValue = this.Address;
-                        cmd.Parameters["Phone"].SqlValue = this.Phone;
+                        cmd.Parameters["Description"].SqlValue = this.Description ?? (object)DBNull.Value;
+                        cmd.Parameters["Website"].SqlValue = this.Website ?? (object)DBNull.Value;
+                        cmd.Parameters["Address"].SqlValue = this.Address ?? (object)DBNull.Value;
+                        cmd.Parameters["Phone"].SqlValue = this.Phone ?? (object)DBNull.Value;
 
                         cnx.Open();
                         cmd.ExecuteNonQuery();

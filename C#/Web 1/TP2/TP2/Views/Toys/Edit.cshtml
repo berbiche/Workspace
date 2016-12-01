@@ -1,4 +1,5 @@
-﻿@model TP2.Models.Toys
+﻿@using System.Web.UI.WebControls
+@model TP2.Models.Toys
 
 @{
     ViewBag.Title = "Edit";
@@ -54,12 +55,16 @@
                 @Html.ValidationMessageFor(model => model.DateAdded, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
+        @{
+            var selected = Model.GetBrands().Find(x => x.Id == Model.BrandId);
+            var brands = Model.GetBrands();
+            brands.Insert(0, null);
+        }
         <div class="form-group">
             @Html.LabelFor(model => model.BrandId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BrandId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.BrandId, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.BrandId, new SelectList(brands, "Id", "Name", selected))
             </div>
         </div>
 

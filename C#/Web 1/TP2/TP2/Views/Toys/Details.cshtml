@@ -33,13 +33,13 @@
         <dd>
             @Html.DisplayFor(model => model.Price)
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.Gender)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.GetGender())
+            @Html.DisplayFor(model => model.GetGender)
         </dd>
 
         <dt>
@@ -53,9 +53,12 @@
         <dt>
             @Html.DisplayNameFor(model => model.BrandId)
         </dt>
-
+        @{
+            var compagnie = Model.GetBrands().Find(x => x.Id == Model.BrandId);
+            string nomCompagnie = compagnie != null ? compagnie.Name : "";
+        }
         <dd>
-            @Html.DisplayFor(model => model.BrandId)
+            @Html.DisplayFor(modelItem => nomCompagnie)
         </dd>
 
     </dl>

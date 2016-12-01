@@ -63,12 +63,12 @@ namespace TP2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Brands brands = Brands.FindOne(id.Value);
+            Brands brands = Brands.FindOne((int)id);
             if (brands == null)
             {
                 return HttpNotFound();
             }
-            return RedirectToAction("Index");
+            return View(brands);
         }
 
         // POST: Brands/Edit/5

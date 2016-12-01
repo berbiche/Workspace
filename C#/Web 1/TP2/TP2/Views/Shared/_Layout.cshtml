@@ -14,9 +14,7 @@
                     <ul class="nav navbar-nav">
                         <li id="acceuil">@Html.ActionLink("Toys4Us", "Index", "Home")</li>
                         <li id="listeToys">@Html.ActionLink("Jouets", "Index", "Toys")</li>
-                        <li id="createToys">@Html.ActionLink("Ajouter un jouet", "Create", "Toys")</li>
                         <li id="listeBrands">@Html.ActionLink("Compagnies", "Index", "Brands")</li>
-                        <li id="createBrands">@Html.ActionLink("Ajouter une compagnie", "Create", "Brands")</li>
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>
@@ -44,13 +42,9 @@
         var a = window.location.pathname;
         if (/^\/$/.test(a))
             $('#acceuil').addClass('active');
-        else if (/^\/Toys\/Create$/i.test(a))
-            $('#createToys').addClass('active');
-        else if (/^\/Toys$/i.test(a))
+        else if (/^\/Toys.*$/i.test(a))
             $('#listeToys').addClass('active');
-        else if (/^\/Brands\/Create$/i.test(a))
-            $('#createBrands').addClass('active');
-        else if (/^\/Brands$/i.test(a))
+        else if (/^\/Brands.*$/i.test(a))
             $('#listeBrands').addClass('active');
         else if (/^\/Auth\/Create$/i.test(a))
             $('#registerLink').addClass('active');

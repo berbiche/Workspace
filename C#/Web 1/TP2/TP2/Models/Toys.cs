@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using System.Linq;
+using System.Reflection;
 
 namespace TP2.Models
 {
@@ -24,7 +26,7 @@ namespace TP2.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Le champ \"{0}\" est requis")]
         [Display(Name = "Nom")]
         [StringLength(200, ErrorMessage = "Le nom du jouet ne peut pas dépasser {0} caractères")]
         public string Name { get; set; }
@@ -39,7 +41,7 @@ namespace TP2.Models
         [DisplayFormat(DataFormatString = "{0:C0}", ApplyFormatInEditMode = false)]
         [Range(0.0, 214748.3647)] //la limite de smallmoney
         public decimal Price { get; set; }
-
+        
         [Display(Name = "Date d'ajout")]
         [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
@@ -48,7 +50,7 @@ namespace TP2.Models
         [Display(Name = "Sexe")]
         public Genders Gender { get; set; }
 
-        [Display(Name = "# de compagnie")]
+        [Display(Name = "Compagnie")]
         [DisplayFormat(ConvertEmptyStringToNull = true)]
         public int? BrandId { get; set; }
 
@@ -60,9 +62,35 @@ namespace TP2.Models
 
         public string GetGender
         {
-            get { return this.Gender.GetType().GetProperty("Display").Name; }
+            get
+            {
+                var gen = typeof(Genders).GetMember(Gender.ToString());
+                if (gen.Length > 0)
+                {
+                    return gen[0].GetCustomAttribute<DisplayAttribute>()?.Name;
+                }
+                return "";
+            }
         }
 
+        //private static IEnumerable<string> _GetGenders;
+
+        //public static IEnumerable<string> GetGenders { get { return _GetGenders; } }
+
+        public List<Brands> GetBrands()
+        {
+            return Brands.GetList();
+        }
+        /*
+        public Toys()
+        {
+            if (_GetGenders == null)
+            {
+                _GetGenders = from qwe in Gender.GetType().GetMembers()
+                              select qwe.GetCustomAttribute<DisplayAttribute>()?.Name;
+            }
+        }
+        */
         public static List<Toys> GetList()
         {
             string cStr = ConfigurationManager.ConnectionStrings["Toys4Us"].ConnectionString;
@@ -80,15 +108,16 @@ namespace TP2.Models
                         {
                             while (dataReader.Read())
                             {
-                                Toys toys = new Toys();
-                                toys.Id = (int)dataReader["id"];
-                                toys.DateAdded = (DateTime)dataReader["Date_Added"];
-                                toys.Description = (string)dataReader["Description"];
-                                toys.Name = (string)dataReader["Name"];
-                                toys.Price = (decimal)dataReader["Price"];
-                                toys.BrandId = dataReader["Brand"] as int? ?? null;
-                                toys.Gender = (Genders)Enum.Parse(typeof(Genders), (string)dataReader["Gender"]);
-                                toysList.Add(toys);
+                                toysList.Add(new Toys()
+                                {
+                                    Id = (int) dataReader["id"],
+                                    Name = (string) dataReader["Name"],
+                                    Description = dataReader["Description"] as string ?? "",
+                                    Price = (decimal) dataReader["Price"],
+                                    DateAdded = (DateTime) dataReader["Date_Added"],
+                                    BrandId = dataReader["Brand"] as int? ?? null,
+                                    Gender = (Genders) Enum.Parse(typeof(Genders), (string) dataReader["Gender"])
+                                });
                             }
                             return toysList;
                         }
@@ -143,11 +172,11 @@ namespace TP2.Models
                             dataReader.Read();
                             return new Toys
                             {
-                                DateAdded = (DateTime)dataReader["Date_Added"],
                                 Id = (int)dataReader["id"],
-                                Description = (string)dataReader["Description"],
                                 Name = (string)dataReader["Name"],
+                                Description = dataReader["Description"] as string ?? "",
                                 Price = (decimal)dataReader["Price"],
+                                DateAdded = (DateTime)dataReader["Date_Added"],
                                 BrandId = dataReader["Brand"] as int? ?? null,
                                 Gender = (Genders)Enum.Parse(typeof(Genders), (string)dataReader["Gender"])
                             };
@@ -189,7 +218,7 @@ namespace TP2.Models
 
                         //donner des valeurs aux paramètres
                         cmd.Parameters["Name"].SqlValue = this.Name;
-                        cmd.Parameters["Description"].SqlValue = this.Description;
+                        cmd.Parameters["Description"].SqlValue = this.Description ?? (object)DBNull.Value; ;
                         cmd.Parameters["Price"].SqlValue = this.Price;
                         cmd.Parameters["DateAdded"].SqlValue = this.DateAdded;
                         cmd.Parameters["Gender"].SqlValue = this.Gender.ToString();
@@ -245,14 +274,11 @@ namespace TP2.Models
 
                         //donner des valeurs aux paramètres
                         cmd.Parameters["Name"].SqlValue = this.Name;
-                        cmd.Parameters["Description"].SqlValue = this.Description;
+                        cmd.Parameters["Description"].SqlValue = this.Description ?? (object)DBNull.Value; ;
                         cmd.Parameters["Price"].SqlValue = this.Price;
                         cmd.Parameters["DateAdded"].SqlValue = this.DateAdded;
                         cmd.Parameters["Gender"].SqlValue = this.Gender.ToString();
-                        if (this.BrandId != null)
-                            cmd.Parameters["BrandId"].SqlValue = this.BrandId;
-                        else
-                            cmd.Parameters["BrandId"].SqlValue = DBNull.Value;
+                        cmd.Parameters["BrandId"].SqlValue = this.BrandId ?? (object)DBNull.Value;
 
                         cnx.Open();
                         cmd.ExecuteNonQuery();
