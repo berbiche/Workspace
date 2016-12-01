@@ -57,7 +57,7 @@ CREATE TABLE [toys4us_Toys]
 	Description  NVARCHAR(400),
 	Date_Added   DATE DEFAULT GETDATE() NOT NULL,
 	Gender       CHAR(1) NOT NULL,
-	Brand        INTEGER REFERENCES [toys4us_Brands](Id) NULL,
+	Brand        INTEGER NULL,
 --Age_Id       INTEGER REFERENCES [toys4us_Age_Categories](Id),
 --Category_Id  INTEGER REFERENCES [toys4us_Categories](Id),
 	Price        SMALLMONEY CHECK (Price >= 0),
@@ -65,7 +65,6 @@ CREATE TABLE [toys4us_Toys]
 )
 GO
 
-SELECT * FROM dbo.toys4us_Brands
-SELECT * FROM dbo.aspnet_User
-SELECT * FROM dbo.toys4us_Toys
+ALTER TABLE [toys4us_Toys]
+	ADD FOREIGN KEY (Brand) REFERENCES [toys4us_Brands](Id) ON UPDATE CASCADE ON DELETE SET NULL
 GO
