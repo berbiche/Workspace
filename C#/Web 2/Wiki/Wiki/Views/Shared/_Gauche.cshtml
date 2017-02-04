@@ -1,0 +1,10 @@
+﻿@using Wiki.Models.DAL
+
+<div class="well">
+    <h4>Contents</h4>
+    @foreach (var article in Articles.GetTitres())
+    {
+        @Html.ActionLink(article, "Index", "Home", new { id = article }, null)
+        <br />
+    }
+</div>
