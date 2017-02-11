@@ -6,8 +6,10 @@ using Wiki.Models.Biz;
 
 namespace Wiki.Controllers
 {
+    [Authorize]
     public class DALController : Controller
     {
+        [Authorize]
         [ValidateInput(false)]
         public ActionResult Index(string operation, Article a)
         {

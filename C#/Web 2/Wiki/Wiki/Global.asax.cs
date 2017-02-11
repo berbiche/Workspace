@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Threading;
 using System.Globalization;
-using Wiki.Models.DAL;
-using Wiki.Models.Biz;
 
 namespace Wiki
 {
@@ -22,6 +18,37 @@ namespace Wiki
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
+        protected void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["langue"];
+            if (cookie == null)
+            {
+                string langue = Request.UserLanguages?[0];
+                try
+                {
+                    Thread.CurrentThread.CurrentCulture = langue == null
+                        ? CultureInfo.InvariantCulture
+                        : new CultureInfo(langue);
+                }
+                catch (CultureNotFoundException)
+                {
+                    Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+                }
+            }
+            else
+            {
+                try
+                {
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo(cookie.Value);
+                }
+                catch (CultureNotFoundException)
+                {
+                    Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+                }
+            }
+
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+        }
 
 
     }

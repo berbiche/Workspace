@@ -168,7 +168,7 @@ namespace Wiki.Models.DAL
                     modifiedLine = command.ExecuteNonQuery();
                     return modifiedLine;
                 }
-                catch (SqlException e)
+                catch (Exception)
                 {
                     return modifiedLine;
                 }

@@ -30,3 +30,7 @@ select {
 .well {
     overflow: hidden
 }
+
+.dropdown-connexion {
+    width: 300px
+}

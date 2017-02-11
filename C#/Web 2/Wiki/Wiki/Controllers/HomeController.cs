@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
 using Wiki.Models.Biz;
@@ -23,7 +19,8 @@ namespace Wiki.Controllers
             return View(article);
         }
 
-        
+
+        [Authorize]
         public ActionResult Ajouter(string id)
         {
             id = id?.Trim();
@@ -32,6 +29,7 @@ namespace Wiki.Controllers
 
 
         [HttpPost]
+        [Authorize]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Ajouter(Article article)
@@ -39,7 +37,8 @@ namespace Wiki.Controllers
             if (!ModelState.IsValid)
                 return View(article);
 
-            article.IdContributeur = 1;
+            Utilisateur user = Utilisateurs.FindByCourriel(User.Identity.Name);
+            article.IdContributeur = user.Id;
             article.Revision = 1;
             article.DateModification = DateTime.Now;
             Articles.Add(article);
@@ -47,6 +46,7 @@ namespace Wiki.Controllers
         }
 
 
+        [Authorize]
         public ActionResult Modifier(string id)
         {
             if (id.IsNullOrWhiteSpace())
@@ -61,6 +61,7 @@ namespace Wiki.Controllers
 
 
         [HttpPost]
+        [Authorize]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Modifier(Article article)
@@ -68,33 +69,36 @@ namespace Wiki.Controllers
             if (!ModelState.IsValid)
                 return View(article);
 
-            article.IdContributeur = 1;
+            Utilisateur user = Utilisateurs.FindByCourriel(User.Identity.Name);
+            article.IdContributeur = user.Id;
             article.Revision++;
             article.DateModification = DateTime.Now;
             Articles.Update(article);
             return RedirectToAction("Index", "Home", new { id = article.Titre });
         }
-        
 
+
+        [Authorize]
         public ActionResult Supprimer(string id)
         {
             if (id.IsNullOrWhiteSpace())
-                return RedirectToAction("index");
+                return RedirectToAction("Index", "Home");
 
             Article article = Articles.Find(id);
             if (article == null)
-                return RedirectToAction("index");
+                return RedirectToAction("Index", "Home");
 
             return View(article);
         }
 
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult SupprimerConfirmer(string id)
         {
             Articles.Delete(id);
-            return RedirectToAction("index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

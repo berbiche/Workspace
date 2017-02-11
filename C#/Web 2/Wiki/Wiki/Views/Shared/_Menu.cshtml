@@ -1,0 +1,45 @@
+﻿@using Wiki.Models.Views
+@using Wiki.Resources.Views
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Prog Web II", "Index", "Home", new { id = ""}, htmlAttributes: new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink(Strings.Profil, "Profil", "Utilisateurs")&nbsp;&nbsp;</li>
+                    <li>@Html.ActionLink(Strings.Deconnexion, "Deconnexion", "Utilisateurs")</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink(Strings.Inscription, "Inscription", "Utilisateurs", new { ReturnUrl = Request.RawUrl }, null)&nbsp;&nbsp;</li>
+                    <li class="dropdown">@{ Html.RenderPartial("_Login", new UserLoginViewModel()); }</li>
+                        }
+                @{
+                    var a = Request.Cookies["langue"];
+                    if (a.Value == "en-CA")
+                    {
+                        <li>
+                            @Html.ActionLink(Strings.Francais, "ChangerLangue", "Utilisateurs", new { langue = "fr-CA", returnUrl = Request.Url.ToString()}, null)
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            @Html.ActionLink(Strings.Anglais, "ChangerLangue", "Utilisateurs", new { langue = "en-CA", returnUrl = Request.Url.AbsoluteUri }, null)
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+

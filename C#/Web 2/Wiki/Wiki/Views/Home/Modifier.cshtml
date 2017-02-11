@@ -1,6 +1,10 @@
-﻿@model Wiki.Models.Biz.Article
+﻿@using Wiki.Resources.Views
+@model Wiki.Models.Biz.Article
+@{
+    ViewBag.Title = StringsArticle.Modifier;
+}
 
-<h2>Modifier</h2>
+<h2>@ViewBag.Title</h2>
 
 @using (Html.BeginForm("Modifier", "Home", FormMethod.Post))
 {
@@ -25,10 +29,10 @@
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             @Html.HiddenFor(model => model.Titre)
-            <input type="submit" value="Save" class="btn btn-default" />
-            <a id="ShowPreview" class="btn btn-default">Preview</a>
-            @Html.ActionLink("Supprimer", "Supprimer", "Home", new { id = Model.Titre }, new { @class = "btn btn-default" })
-            @Html.ActionLink("Annuler", "Index", "Home", null, new { @class = "btn btn-default" })
+            <input type="submit" value="@StringsArticle.Sauvegarder" class="btn btn-default" />
+            <a id="ShowPreview" class="btn btn-default">@StringsArticle.Preview</a>
+            @Html.ActionLink(StringsArticle.Supprimer, "Supprimer", "Home", new { id = Model.Titre }, new { @class = "btn btn-default" })
+            @Html.ActionLink(StringsArticle.Annuler, "Index", "Home", null, new { @class = "btn btn-default" })
         </div>
     </div>
 }

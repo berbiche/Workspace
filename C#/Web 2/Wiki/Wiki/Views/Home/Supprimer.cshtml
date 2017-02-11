@@ -1,10 +1,11 @@
-﻿@model Wiki.Models.Biz.Article
+﻿@using Wiki.Resources.Views
+@model Wiki.Models.Biz.Article
 
 @{
-    ViewBag.Title = "Supprimer";
+    ViewBag.Title = StringsArticle.Supprimer;
 }
 
-<h3>Êtes-vous sûr de vouloir supprimer "@Model.Titre"?</h3>
+<h3>@StringsArticle.SupprimerPageTitre "@Model.Titre"?</h3>
 <hr />
 <div class="contenu">
     @Html.Raw(Model.Contenu)
@@ -25,7 +26,7 @@
 
     <div class="form-actions no-color">
         @Html.HiddenFor(model => model.Titre)
-        <input type="submit" value="Supprimer" class="btn btn-default" />
-        @Html.ActionLink("Annuler", "Index", null, new { @class = "btn btn-default" })
+        <input type="submit" value="@StringsArticle.Supprimer" class="btn btn-default" />
+        @Html.ActionLink(StringsArticle.Annuler, "Index", "Home", null, new { @class = "btn btn-default" })
     </div>
 }

@@ -1,7 +1,8 @@
 ﻿@using Wiki.Models.DAL
+@using Wiki.Resources.Views
 
 <div class="well">
-    <h4>Contents</h4>
+    <h4>@Strings.Contenu</h4>
     @foreach (var article in Articles.GetTitres())
     {
         @Html.ActionLink(article, "Index", "Home", new { id = article }, null)

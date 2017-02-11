@@ -1,8 +1,8 @@
-﻿@using Microsoft.Ajax.Utilities
+﻿@using Wiki.Resources.Views
 @model Wiki.Models.Biz.Article
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = StringsArticle.Index;
 }
 
 <h1>
@@ -15,14 +15,14 @@
     {
         <div class="form-horizontal">
             <div class="form-group">
-                <span class="control-label col-md-2">View article </span>
+                <span class="control-label col-md-2">@StringsArticle.VoirArticle</span>
                 <div class="col-md-10">
-                    <input class="form-control" id="id" name="id" type="text" value="">
+                    <input class="form-control" id="id" name="id" type="text" placeholder="@StringsArticle.VoirArticleId">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input value="View" id="ViewArticle" class="btn btn-default">
+                    <input value="@StringsArticle.Voir" id="ViewArticle" class="btn btn-default">
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
 else if (Model == null)
 {
     <h2>Cet article n'existe pas</h2>
-    @Html.ActionLink("Créer cet article", "Ajouter", new { id = ViewBag.titre })
+    @Html.ActionLink(StringsArticle.CreerArticle, "Ajouter", new { id = ViewBag.titre })
 }
 else
 {
@@ -45,5 +45,5 @@ else
         <dt>@Html.DisplayNameFor(model => model.IdContributeur)</dt>
         <dd>@Html.DisplayFor(model => model.IdContributeur)</dd>
     </dl>
-    @Html.ActionLink("Edit", "Modifier", "Home", new { id = Model.Titre }, new { @class = "btn btn-default" })
+    @Html.ActionLink(StringsArticle.Modifier, "Modifier", "Home", new { id = Model.Titre }, new { @class = "btn btn-default" })
 }
