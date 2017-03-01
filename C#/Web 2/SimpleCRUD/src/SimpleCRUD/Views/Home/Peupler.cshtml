@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Peupler";
+}
+
+<h3>Peupler la table Employes</h3>
+<hr/>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <label for="X" class="control-label col-md-2">Nombre x</label>
+            <div class="col-md-10">
+                <input type="number" id="X" name="X" class="form-control" value="@ViewBag.x"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Y" class="control-label col-md-2">Nombre y</label>
+            <div class="col-md-10">
+                <input type="number" id="Y" name="Y" class="form-control" value="@ViewBag.y"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Peupler" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Retour à la liste d'employés", "Index", null, new { @class = "btn btn-primary" })
+</div>

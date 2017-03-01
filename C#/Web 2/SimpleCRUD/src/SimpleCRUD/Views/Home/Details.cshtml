@@ -1,0 +1,65 @@
+﻿@model SimpleCRUD.Models.Employe
+
+@{
+}
+
+<h2>Détails employé</h2>
+<hr />
+<dl class="dl-horizontal">
+    <dt>
+        @Html.NameFor(model => model.Id)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Id)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.Prenom)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Prenom)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.Nom)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Nom)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.Fonction)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Fonction)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.Pays)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Pays)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.Salaire)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.Salaire)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.DateNaissance)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.DateNaissance)
+    </dd>
+    <dt>
+        @Html.NameFor(model => model.DateEmbauche)
+    </dt>
+    <dd>
+        @Html.ValueFor(model => model.DateEmbauche)
+    </dd>
+</dl>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Modifier</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Supprimer</a>
+</div>
+<div>
+    <a asp-action="Index">Retour à la liste d'employés</a>
+</div>

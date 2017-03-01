@@ -1,0 +1,98 @@
+﻿@model IEnumerable<SimpleCRUD.Models.Employe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Liste des employés</h2>
+<h3>
+    <a asp-action="Create">Créer un nouvel employé</a>
+</h3>
+<h5>
+    <a asp-action="Peupler">Peupler la table employé</a>
+</h5>
+@if (ViewBag.Recherche)
+{
+    <a asp-action="Index">Retourner à l'index</a>
+}
+
+<hr />
+@using (Html.BeginForm(FormMethod.Get))
+{
+    <label>Rechercher par id <input name="id" type="number"/></label>
+    <br/>
+    <label>Rechercher par nom <input name="nom" type="text"/></label>
+    <br/>
+    <input type="submit" value="Rechercher"/>
+}
+
+<hr/>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prenom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateNaissance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fonction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salaire)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateEmbauche)
+        </th>
+        <th colspan="3">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var employe in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Prenom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Nom)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.DateNaissance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Fonction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Pays)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.Salaire)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => employe.DateEmbauche)
+                    </td>
+                    <td colspan="3">
+                        <div class="btn-group">
+                            <a class="btn btn-default" asp-action="Details" asp-route-id="@employe.Id">Détails</a>
+                            <a class="btn btn-default" asp-action="Edit" asp-route-id="@employe.Id">Modifier</a>
+                            <a class="btn btn-default" asp-action="Delete" asp-route-id="@employe.Id">Supprimer</a>
+                        </div>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
