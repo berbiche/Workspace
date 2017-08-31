@@ -1,0 +1,17 @@
+fn_args_density = "CompressedIfEmpty"
+fn_args_paren_newline = false
+fn_brace_style = "SameLineWhere"
+fn_empty_single_line = true
+fn_return_indent = "WithWhereClause"
+fn_single_line = true
+hard_tabs = false
+# ideal_width = 120
+impl_empty_single_line = true
+match_block_trailing_comma = true
+max_width = 120
+newline_style = "Unix"
+reoder_imported_names = true
+struct_lit_multiline_style = "ForceMulti"
+struct_field_align_threshold = 20
+struct_lit_style = "Visual"
+tab_spaces = 4
